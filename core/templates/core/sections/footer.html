@@ -1,0 +1,31 @@
+{% if footer %}
+<div class="footer-lead" aria-hidden="true"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        {% if header and header.logo %}<a class="foot-logo" href="#top"><img src="{{ header.logo.url }}" alt="{{ header.site_name }}"></a>{% endif %}
+        {% if footer.tagline %}<p>{{ footer.tagline }}</p>{% endif %}
+      </div>
+      <div class="foot-social">
+        {% for s in footer.socials_live %}
+        <a class="soc" href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.get_platform_display }}">{% include "core/sections/_social_icon.html" with platform=s.platform %}</a>
+        {% endfor %}
+        {% if footer.socials_live and footer.show_website_pill and footer.website_text %}<span class="foot-sep"></span>{% endif %}
+        {% if footer.show_website_pill and footer.website_text %}<a class="web-pill" href="{{ footer.website_url }}" target="_blank" rel="noopener"><span class="material-symbols-outlined">language</span>{{ footer.website_text }}</a>{% endif %}
+      </div>
+    </div>
+    {% if footer.links_live %}
+    <nav class="foot-nav" aria-label="Footer menu">
+      {% for l in footer.links_live %}<a href="{{ l.link }}"{% if l.is_highlighted %} class="is-hl"{% endif %}{% if l.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% endfor %}
+    </nav>
+    {% endif %}
+    <div class="foot-bottom">
+      <p>{{ footer.copyright_text }}</p>
+      <nav class="legal" aria-label="Legal">
+        {% for l in footer.legal_links_live %}{% if l.link %}<a href="{{ l.link }}"{% if l.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% else %}<span class="is-off">{{ l.label }}</span>{% endif %}{% endfor %}
+      </nav>
+    </div>
+  </div>
+</footer>
+{% endif %}

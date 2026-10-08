@@ -1,0 +1,26 @@
+{% if partners %}
+<section class="section partners" id="{{ partners.menu_anchor }}">
+  <div class="container">
+    <header class="sec-head reveal">
+      {% if partners.pill_text %}<span class="pill pill-mint">{{ partners.pill_text }}</span>{% endif %}
+      <h2 class="sec-title sec-title-sm">{{ partners.heading }}</h2>
+    </header>
+    {% if partners.logos_live %}
+    <div class="carousel reveal" data-carousel data-autoplay="{{ partners.autoplay|yesno:'1,0' }}" data-seconds="{{ partners.speed_seconds }}">
+      {% if partners.show_arrows %}<button class="car-btn car-prev" type="button" aria-label="Previous logos"><span class="material-symbols-outlined">chevron_left</span></button>{% endif %}
+      <div class="car-viewport" data-viewport>
+        <ul class="car-track" data-track>
+          {% for l in partners.logos_live %}
+          <li class="logo-card">
+            {% if l.website %}<a href="{{ l.website }}" target="_blank" rel="noopener" aria-label="{{ l.name }}"><img src="{{ l.logo.url }}" alt="{{ l.name }}" loading="lazy"></a>
+            {% else %}<img src="{{ l.logo.url }}" alt="{{ l.name }}" loading="lazy">{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% if partners.show_arrows %}<button class="car-btn car-next" type="button" aria-label="Next logos"><span class="material-symbols-outlined">chevron_right</span></button>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

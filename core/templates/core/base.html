@@ -1,0 +1,29 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  {% if meta_description %}<meta name="description" content="{{ meta_description }}">{% endif %}
+  {% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords }}">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }}">
+  {% if meta_description %}<meta property="og:description" content="{{ meta_description }}">{% endif %}
+  {% if og_image %}<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ og_image.url }}">{% endif %}
+  <link rel="icon" href="{% static 'core/img/favicon.ico' %}" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/img/favicon-32.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'core/img/apple-touch-icon.png' %}">
+  <meta name="theme-color" content="#064E45">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'core/css/main.css' %}?v={{ asset_version }}">
+</head>
+<body id="top">
+{% block content %}{% endblock %}
+<script src="{% static 'core/js/main.js' %}?v={{ asset_version }}" defer></script>
+</body>
+</html>

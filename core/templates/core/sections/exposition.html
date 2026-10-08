@@ -1,0 +1,53 @@
+{% if exposition %}
+<section class="section exposition" id="{{ exposition.menu_anchor }}">
+  <div class="container">
+    <header class="sec-head sec-head-row reveal">
+      <div>
+        {% if exposition.pill_text %}<span class="pill pill-mint"><i class="dot dot-gold"></i>{{ exposition.pill_text }}</span>{% endif %}
+        <h2 class="sec-title">{{ exposition.heading }}</h2>
+        {% if exposition.subtext %}<p class="sec-text">{{ exposition.subtext }}</p>{% endif %}
+      </div>
+      {% if exposition.show_top_button and exposition.top_button_text %}<a class="btn btn-dark" href="{{ exposition.top_button_link }}">{{ exposition.top_button_text }}<span class="material-symbols-outlined">chevron_right</span></a>{% endif %}
+    </header>
+    <div class="expo-grid">
+      <aside class="expo-side">
+        <figure class="venue reveal"{% if exposition.venue_image %} style="background-image:url('{{ exposition.venue_image.url }}')"{% endif %}>
+          <figcaption>
+            {% if exposition.venue_tag %}<span class="pill pill-glass"><i class="dot dot-green"></i>{{ exposition.venue_tag }}</span>{% endif %}
+            <h3>{{ exposition.venue_title }}</h3>
+            <p>{{ exposition.venue_subtext }}</p>
+          </figcaption>
+        </figure>
+        {% if exposition.show_pass_box %}
+        <div class="pass-box reveal">
+          <div class="pass-top"><h3><i class="dot dot-dark"></i>{{ exposition.pass_title }}</h3>{% if exposition.pass_tag %}<span class="pill pill-mint">{{ exposition.pass_tag }}</span>{% endif %}</div>
+          <div class="pass-count"><span class="count-badge">{{ exposition.pass_count }}</span><div><b>{{ exposition.pass_headline }}</b><small>{{ exposition.pass_subline }}</small></div></div>
+          {% if exposition.pass_includes %}<p class="pass-note includes"><span class="material-symbols-outlined">check</span><b>PASS INCLUDES:</b> {{ exposition.pass_includes }}</p>{% endif %}
+          {% if exposition.pass_excludes %}<p class="pass-note excludes"><span class="material-symbols-outlined">warning</span><b>PASS EXCLUDES:</b> {{ exposition.pass_excludes }}</p>{% endif %}
+          <div class="pass-foot"><small>{{ exposition.gst_footnote }}</small>{% if exposition.footer_link_text %}<a href="{{ exposition.footer_link_url }}">{{ exposition.footer_link_text }}</a>{% endif %}</div>
+        </div>
+        {% endif %}
+      </aside>
+      <div class="booth-list">
+        {% for b in exposition.booths_live %}
+        <article class="booth reveal{% if b.flagship_tag %} is-flagship{% endif %}" style="--tint:{{ b.tint_color }}; --acc:{{ b.accent_color }}">
+          {% if b.flagship_tag %}<span class="flag-tag">{{ b.flagship_tag }}</span>{% endif %}
+          <div class="booth-size"><span class="material-symbols-outlined">{{ b.icon }}</span><b>{{ b.size_label }}</b><small>{{ b.grid_label }}</small></div>
+          <div class="booth-info">
+            <p class="booth-tags">{% if b.space_type %}<span class="tag">{{ b.space_type }}</span>{% endif %}{{ b.dimensions }}</p>
+            <p class="booth-cat">{{ b.category }}</p>
+            <h3>{{ b.name }}</h3>
+          </div>
+          <div class="booth-price">
+            <small>{{ b.price_label }}</small>
+            <b>{{ b.currency_symbol }}{{ b.price }}</b>
+            <small>{{ b.gst_note }}</small>
+          </div>
+          <a class="btn btn-sm btn-{{ b.button_style }}" href="{{ b.button_link }}">{{ b.button_text }}</a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

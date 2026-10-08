@@ -1,0 +1,28 @@
+{% if gain %}
+<section class="section gain" id="{{ gain.menu_anchor }}">
+  <div class="container">
+    <div class="gain-panel reveal">
+      <div class="gain-main">
+        {% if gain.pill_text %}<span class="pill pill-glass">{% if gain.pill_show_dot %}<i class="dot"></i>{% endif %}{{ gain.pill_text }}</span>{% endif %}
+        <h2 class="sec-title on-dark">{{ gain.heading }}</h2>
+        <div class="gain-cards">
+          {% for c in gain.cards_live %}
+          <article class="gain-card">
+            <span class="gain-ico"><span class="material-symbols-outlined">{{ c.icon }}</span></span>
+            <h3>{{ c.title }}</h3>
+            <p>{{ c.description }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+      {% if gain.show_video %}
+      <div class="gain-video"{% if gain.video_thumbnail %} style="background-image:url('{{ gain.video_thumbnail.url }}')"{% endif %}>
+        {% if gain.video_url %}<a class="play" href="{{ gain.video_url }}" target="_blank" rel="noopener" aria-label="Play video"><span class="material-symbols-outlined">play_arrow</span></a>
+        {% else %}<span class="play"><span class="material-symbols-outlined">play_arrow</span></span>{% endif %}
+        {% if gain.caption_words %}<p class="video-caption">{% for w in gain.caption_words %}{{ w }}{% if not forloop.last %} <i class="dot"></i> {% endif %}{% endfor %}</p>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}

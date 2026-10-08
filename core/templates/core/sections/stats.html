@@ -1,0 +1,15 @@
+{% if stats %}
+<section class="stats" id="{{ stats.menu_anchor }}">
+  <div class="container">
+    <div class="stats-panel reveal" style="--hover:{{ stats.hover_color }};{% if stats.background_image %} --stats-bg:url('{{ stats.background_image.url }}');{% endif %}">
+      {% for s in stats.items_live %}
+      <div class="stat">
+        <b class="stat-num"><span data-count="{{ s.number }}">{{ s.number }}</span>{{ s.suffix }}</b>
+        <span class="stat-label">{{ s.label }}</span>
+        {% if s.description %}<p>{{ s.description }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

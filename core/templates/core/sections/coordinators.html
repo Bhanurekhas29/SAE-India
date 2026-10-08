@@ -1,0 +1,37 @@
+{% if coordinators %}
+<section class="section coordinators" id="{{ coordinators.menu_anchor }}">
+  <div class="container">
+    <div class="contact-card reveal">
+      <header class="contact-head">
+        <div>
+          {% if coordinators.eyebrow %}<p class="eyebrow">{{ coordinators.eyebrow }}</p>{% endif %}
+          <h2 class="sec-title sec-title-sm">{{ coordinators.heading }}</h2>
+        </div>
+        {% if coordinators.side_text %}<p class="contact-side">{{ coordinators.side_text }}</p>{% endif %}
+      </header>
+      <div class="coord-grid">
+        {% for c in coordinators.coordinators_live %}
+        <article class="coord">
+          <span class="person-ico"><span class="material-symbols-outlined">person</span></span>
+          <div>
+            <h3>{{ c.name }}</h3>
+            {% for ph in c.phone_list %}<a class="line" href="tel:{{ ph.tel }}"><span class="material-symbols-outlined">call</span>{{ ph.display }}</a>{% endfor %}
+            {% for em in c.email_list %}<a class="line" href="mailto:{{ em }}"><span class="material-symbols-outlined">mail</span>{{ em }}</a>{% endfor %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="desk-grid"{% if coordinators.desk_background_image %} style="--desk-bg:url('{{ coordinators.desk_background_image.url }}')"{% endif %}>
+        {% for d in coordinators.desks_live %}
+        <article class="desk">
+          <span class="pill pill-orange-solid">{{ d.tag }}</span>
+          <h3>{{ d.name }}</h3>
+          {% for ph in d.phone_list %}<a class="line" href="tel:{{ ph.tel }}"><span class="material-symbols-outlined">call</span>{{ ph.display }}</a>{% endfor %}
+          {% for em in d.email_list %}<a class="line" href="mailto:{{ em }}"><span class="material-symbols-outlined">mail</span>{{ em }}</a>{% endfor %}
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

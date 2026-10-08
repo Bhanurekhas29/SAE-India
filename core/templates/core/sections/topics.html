@@ -1,0 +1,23 @@
+{% if topics %}
+<section class="section topics" id="{{ topics.menu_anchor }}">
+  <div class="container">
+    <header class="sec-head reveal">
+      {% if topics.eyebrow %}<p class="eyebrow">{{ topics.eyebrow }}</p>{% endif %}
+      <h2 class="sec-title">{{ topics.heading_pre }} {% if topics.heading_highlight %}<span class="hl-green">{{ topics.heading_highlight }}</span>{% endif %}</h2>
+      {% if topics.subtext %}<p class="sec-text">{{ topics.subtext }}</p>{% endif %}
+    </header>
+    <div class="topic-grid">
+      {% for c in topics.cards_live %}
+      <article class="topic-card reveal{% if c.is_featured %} is-featured{% endif %}">
+        {% if c.image %}<div class="topic-photo" style="background-image:url('{{ c.image.url }}')"></div>{% endif %}
+        <div class="topic-body">
+          <span class="topic-icon">{% if c.icon_image %}<img src="{{ c.icon_image.url }}" alt="">{% else %}<span class="material-symbols-outlined">interests</span>{% endif %}</span>
+          <h3>{{ c.title }}</h3>
+          <p>{{ c.description }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

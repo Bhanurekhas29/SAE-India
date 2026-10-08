@@ -1,0 +1,41 @@
+{% if special %}
+<section class="section special" id="{{ special.menu_anchor }}">
+  <div class="container">
+    <header class="sec-head sec-head-row reveal">
+      <div>
+        {% if special.pill_text %}<span class="pill pill-mint"><i class="dot dot-gold"></i>{{ special.pill_text }}</span>{% endif %}
+        <h2 class="sec-title">{{ special.heading }}</h2>
+        {% if special.subtext %}<p class="sec-text">{{ special.subtext }}</p>{% endif %}
+      </div>
+      {% if special.show_tag and special.tag_text %}<span class="pill pill-outline">{{ special.tag_text }}</span>{% endif %}
+    </header>
+    <div class="ticket-grid">
+      {% for c in special.cards_live %}
+      <article class="ticket reveal{% if c.is_highlighted %} is-hl{% endif %}" style="--strip:{{ c.strip_color }}">
+        <div class="ticket-strip"><span>{{ c.strip_text }}</span></div>
+        <div class="ticket-body">
+          <div class="ticket-main">
+            <p class="ticket-tags">{% if c.exclusive_tag %}<span class="tag tag-orange">{{ c.exclusive_tag }}</span>{% endif %}{% if c.slot_tag %}<span class="tag tag-mint">{{ c.slot_tag }}</span>{% endif %}</p>
+            <h3>{{ c.name }}</h3>
+            <p class="ticket-desc">{{ c.description }}</p>
+          </div>
+          <div class="ticket-price">
+            <small>{{ c.price_label }}</small>
+            <b>{{ c.currency_symbol }}{{ c.price }}</b>
+            {% if c.price_note_prefix %}<small>({{ c.price_note_prefix }} {{ c.price }})</small>{% endif %}
+          </div>
+          <div class="ticket-deliver">
+            <p class="eyebrow">{{ c.deliverables_label }}</p>
+            <ul class="check-list">{% for d in c.deliverable_list %}<li><span class="material-symbols-outlined">check_circle</span>{{ d }}</li>{% endfor %}</ul>
+          </div>
+          <div class="ticket-foot">
+            <span class="passes"><small>{{ c.passes_label }}</small> <b>{{ c.passes_value }}</b></span>
+            <a class="btn btn-sm btn-{{ c.button_style }}" href="{{ c.button_link }}">{{ c.button_text }}</a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

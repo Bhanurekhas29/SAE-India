@@ -1,0 +1,40 @@
+{% if contact %}
+<section class="section contact" id="{{ contact.menu_anchor }}">
+  <div class="container">
+    <div class="contact-card reveal">
+      <header class="contact-head">
+        <div>
+          {% if contact.eyebrow %}<p class="eyebrow">{{ contact.eyebrow }}</p>{% endif %}
+          <h2 class="contact-title">{{ contact.heading }}</h2>
+        </div>
+        {% if contact.side_text %}<p class="contact-side">{{ contact.side_text }}</p>{% endif %}
+      </header>
+      <div class="contact-grid">
+        {% for p in contact.people_live %}
+        <article class="person-card">
+          <div class="person-top"><span class="person-ico"><span class="material-symbols-outlined">person</span></span>{% if p.tag %}<span class="tag tag-mint">{{ p.tag }}</span>{% endif %}</div>
+          <h3>{{ p.name }}</h3>
+          <p class="person-role">{{ p.role }}</p>
+          <div class="person-lines">
+            {% for ph in p.phone_list %}<a class="line" href="tel:{{ ph.tel }}"><span class="material-symbols-outlined">call</span>{{ ph.display }}</a>{% endfor %}
+            {% for em in p.email_list %}<a class="line" href="mailto:{{ em }}"><span class="material-symbols-outlined">mail</span>{{ em }}</a>{% endfor %}
+          </div>
+        </article>
+        {% endfor %}
+        {% if contact.show_qr %}
+        <aside class="qr-card"{% if contact.qr_background_image %} style="--qr-bg:url('{{ contact.qr_background_image.url }}')"{% endif %}>
+          {% if contact.qr_pill_text %}<span class="pill pill-orange-solid"><i class="dot"></i>{{ contact.qr_pill_text }}</span>{% endif %}
+          <h3>{{ contact.qr_title }}</h3>
+          <p>{{ contact.qr_subtext }}</p>
+          <div class="qr-box">{% if contact.qr_image %}<img src="{{ contact.qr_image.url }}" alt="QR code">{% else %}<span class="material-symbols-outlined">qr_code_2</span>{% endif %}</div>
+          {% if contact.qr_caption %}<small><span class="material-symbols-outlined">photo_camera</span>{{ contact.qr_caption }}</small>{% endif %}
+        </aside>
+        {% endif %}
+      </div>
+      {% if contact.show_strip %}
+      <div class="contact-strip"><span><span class="globe"><span class="material-symbols-outlined">language</span></span>{{ contact.strip_label }}</span>{% if contact.strip_link_url %}<a href="{{ contact.strip_link_url }}" target="_blank" rel="noopener">{{ contact.strip_link_text }}<span class="material-symbols-outlined">open_in_new</span></a>{% endif %}</div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}

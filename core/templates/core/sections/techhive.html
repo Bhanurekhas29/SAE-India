@@ -1,0 +1,71 @@
+{% if techhive %}
+<section class="section techhive" id="{{ techhive.menu_anchor }}">
+  <div class="container">
+    <header class="sec-head sec-head-row reveal">
+      <div>
+        {% if techhive.pill_text %}<span class="pill pill-mint"><i class="dot dot-gold"></i>{{ techhive.pill_text }}</span>{% endif %}
+        <h2 class="sec-title">{{ techhive.heading }}</h2>
+        {% if techhive.subtext %}<p class="sec-text">{{ techhive.subtext }}</p>{% endif %}
+      </div>
+      {% if techhive.show_top_button and techhive.top_button_text %}<a class="btn btn-dark" href="{{ techhive.top_button_link }}">{{ techhive.top_button_text }}<span class="material-symbols-outlined">chevron_right</span></a>{% endif %}
+    </header>
+
+    {% if techhive.show_panel %}
+    <div class="th-panel reveal">
+      <div class="th-left">
+        <p class="th-tags">{% if techhive.panel_tag1 %}<span class="tag tag-yellow"><i class="dot dot-gold"></i>{{ techhive.panel_tag1 }}</span>{% endif %}{% if techhive.panel_tag2 %}<span class="tag tag-teal">{{ techhive.panel_tag2 }}</span>{% endif %}</p>
+        <h3>{{ techhive.panel_title }}</h3>
+        <p>{{ techhive.panel_description }}</p>
+        <div class="fee-box">
+          <p class="fee-top"><span>{{ techhive.fee_label }}</span>{% if techhive.fee_tag %}<em>{{ techhive.fee_tag }}</em>{% endif %}</p>
+          <p class="fee-price">{{ techhive.fee_currency }} {{ techhive.fee_price }} <small>{{ techhive.fee_unit }}</small></p>
+          {% if techhive.fee_gst_note %}<p class="fee-gst"><i class="dot dot-gold"></i>{{ techhive.fee_gst_note }}</p>{% endif %}
+        </div>
+      </div>
+      <div class="th-mid">
+        <p class="eyebrow">{{ techhive.deliverables_label }}</p>
+        {% for d in techhive.deliverables_live %}
+        <div class="th-item"><span class="th-ico"><span class="material-symbols-outlined">{{ d.icon }}</span></span><div><b>{{ d.title }}</b><small>{{ d.subline }}</small></div></div>
+        {% endfor %}
+      </div>
+      <div class="th-right">
+        {% if techhive.apply_button_text %}<a class="btn btn-amber btn-apply" href="{{ techhive.apply_button_link }}">{{ techhive.apply_button_text }}</a>{% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if techhive.show_delegate_matrix %}
+    <div class="del-card reveal">
+      <div class="del-bar">
+        <div><h3><i class="dot dot-gold"></i>{{ techhive.matrix_title }}</h3><p>{{ techhive.matrix_subtitle }}</p></div>
+        {% if techhive.matrix_badge %}<span class="badge-gold">{{ techhive.matrix_badge }}</span>{% endif %}
+      </div>
+      <div class="table-scroll">
+        <table class="del-table">
+          <thead>
+            <tr>
+              <th><b>{{ techhive.category_column_title }}</b><small>{{ techhive.category_column_note }}</small></th>
+              <th><b>{{ techhive.early_column_title }}</b><small class="early">{{ techhive.early_column_note }}</small></th>
+              <th><b>{{ techhive.standard_column_title }}</b><small>{{ techhive.standard_column_note }}</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for r in techhive.rates_live %}
+            <tr>
+              <th scope="row"><b>{{ r.category }}</b>{% if r.note %}<small class="save"><span class="material-symbols-outlined">check</span>{{ r.note }}</small>{% endif %}{% if r.description %}<small>{{ r.description }}</small>{% endif %}</th>
+              <td class="early-price">{{ r.early_price }}</td>
+              <td>{{ r.standard_price }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="del-foot">
+        <small><i class="dot dot-dark"></i>{{ techhive.matrix_gst_note }}</small>
+        {% if techhive.matrix_button_text %}<a class="btn btn-sm btn-dark" href="{{ techhive.matrix_button_link }}">{{ techhive.matrix_button_text }}</a>{% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

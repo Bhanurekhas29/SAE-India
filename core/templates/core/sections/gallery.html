@@ -1,0 +1,18 @@
+{% if gallery %}
+<section class="section gallery" id="{{ gallery.menu_anchor }}">
+  <div class="container">
+    <header class="sec-head reveal">
+      {% if gallery.pill_text %}<span class="pill pill-mint"><i class="dot dot-green"></i>{{ gallery.pill_text }}</span>{% endif %}
+      <h2 class="sec-title">{{ gallery.heading }}</h2>
+      {% if gallery.subtext %}<p class="sec-text">{{ gallery.subtext }}</p>{% endif %}
+    </header>
+    <div class="gallery-grid">
+      {% for img in gallery.images_live %}
+      <a class="g-item reveal" href="{{ img.image.url }}" data-lightbox data-caption="{{ img.caption }}">
+        <img src="{{ img.image.url }}" alt="{{ img.caption|default:gallery.heading }}" loading="lazy">
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

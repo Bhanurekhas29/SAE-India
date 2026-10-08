@@ -1,0 +1,46 @@
+{% if matrix %}
+<section class="section matrix" id="{{ matrix.menu_anchor }}">
+  <div class="container">
+    <div class="matrix-card reveal">
+      <div class="matrix-bar">
+        <h2><i class="dot dot-gold"></i>{{ matrix.title }}</h2>
+        {% if matrix.note %}<p>{{ matrix.note }}</p>{% endif %}
+      </div>
+      <div class="table-scroll">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th class="m-first">{{ matrix.first_column_title }}</th>
+              {% for t in matrix.tiers_live %}
+              <th class="{% if t.is_highlighted %}is-hl{% endif %}"><b>{{ t.name }}</b>{% if t.price %}<small>{{ t.price }}</small>{% endif %}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for cat in matrix.categories_live %}
+            <tr class="m-cat"><td colspan="{{ matrix.tiers_live|length|add:1 }}">{{ cat.title }}</td></tr>
+            {% for row in cat.rows_live %}
+            <tr>
+              <th class="m-label" scope="row">{{ row.label }}</th>
+              {% for cell in row.cells_live %}
+              <td{% if cell and cell.tier.is_highlighted %} class="is-hl"{% endif %}>
+                {% if cell %}
+                  {% if cell.style == 'yes' %}<span class="m-yes"><span class="material-symbols-outlined">check</span>Yes</span>
+                  {% elif cell.style == 'dash' %}<span class="m-dash">–</span>
+                  {% elif cell.style == 'na' %}<span class="m-na">Not applicable</span>
+                  {% elif cell.style == 'badge' %}<span class="m-badge">{{ cell.text }}</span>
+                  {% elif cell.style == 'bold' %}<b>{{ cell.text }}</b>{% else %}{{ cell.text }}{% endif %}
+                  {% if cell.subtext %}<small class="m-sub">{{ cell.subtext }}</small>{% endif %}
+                {% endif %}
+              </td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,24 @@
+{% load static %}{% if committee %}
+<section class="section committee" id="{{ committee.menu_anchor }}">
+  {% for c in committee.committees_live %}
+  <div class="committee-block"{% if c.background_image %} style="--cm-bg:url('{{ c.background_image.url }}')"{% endif %}>
+    <div class="container">
+      <header class="sec-head reveal">
+        {% if c.pill_text %}<span class="pill pill-dark">{% if c.pill_show_dot %}<i class="dot"></i>{% endif %}{{ c.pill_text }}</span>{% endif %}
+        <h2 class="sec-title">{{ c.title }}</h2>
+      </header>
+      <div class="member-grid">
+        {% for e in c.entries %}
+        <article class="member reveal">
+          <img class="member-photo" src="{% if e.member.photo %}{{ e.member.photo.url }}{% else %}{% static 'core/img/default-avatar.png' %}{% endif %}" alt="{{ e.member.name }}" loading="lazy">
+          <h3>{{ e.member.name }}</h3>
+          <p class="member-role">{{ e.role }}</p>
+          <p class="member-desig">{{ e.member.designation }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}

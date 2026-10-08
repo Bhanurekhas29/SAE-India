@@ -1,0 +1,27 @@
+{% if meeting %}
+<section class="section meeting" id="{{ meeting.menu_anchor }}">
+  <div class="container">
+    <div class="meeting-wrap reveal">
+      <div class="meeting-card">
+        {% if meeting.pill_text %}<span class="pill pill-glass">{{ meeting.pill_text }}</span>{% endif %}
+        <h2>{{ meeting.title }}</h2>
+        <p class="meeting-price">{{ meeting.currency_label }} {{ meeting.price }} {% if meeting.price_unit %}<small>{{ meeting.price_unit }}</small>{% endif %}</p>
+        {% if meeting.gst_note %}<p class="meeting-gst">{{ meeting.gst_note }}</p>{% endif %}
+        <ul class="meeting-details">
+          {% for d in meeting.details_live %}<li><span class="material-symbols-outlined">{{ d.icon }}</span><span><b>{{ d.label }}</b> {{ d.text }}</span></li>{% endfor %}
+        </ul>
+        {% if meeting.button_text %}<a class="btn btn-amber btn-block" href="{{ meeting.button_link }}">{{ meeting.button_text }}</a>{% endif %}
+      </div>
+      <div class="meeting-features">
+        {% for f in meeting.features_live %}
+        <article class="mf-card">
+          <span class="mf-ico"><span class="material-symbols-outlined">{{ f.icon }}</span></span>
+          <h3>{{ f.title }}</h3>
+          <p>{{ f.description }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

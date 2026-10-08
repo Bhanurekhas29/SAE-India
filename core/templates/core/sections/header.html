@@ -1,0 +1,20 @@
+{% if header %}
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="logo" href="#top" aria-label="{{ header.site_name }} - back to top">
+      {% if header.logo %}<img src="{{ header.logo.url }}" alt="{{ header.site_name }}">{% else %}<span class="logo-text">{{ header.site_name }}</span>{% endif %}
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main menu">
+      {% for item in header.menu_items_live %}
+      <a href="{{ item.link }}"{% if item.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+    {% if header.show_button and header.button_text %}
+    <a class="btn btn-orange header-cta" href="{{ header.button_link }}"{% if header.button_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ header.button_text }}</a>
+    {% endif %}
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+{% endif %}

@@ -1,0 +1,7 @@
+{% if credits and credits.is_active %}
+<div class="credits-bar">
+  <div class="container">
+    <a class="credits" href="{{ credits.url }}"{% if credits.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ credits.text }}</a>
+  </div>
+</div>
+{% endif %}

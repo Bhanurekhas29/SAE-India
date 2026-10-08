@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --sae-slate: #334155;
+  --sae-teal: #0D9488;
+  --sae-orange: #F07416;
+  --sae-mint: #CCFBF1;
+}
+
+body, .main-sidebar, .content-wrapper, .form-control, .btn, h1, h2, h3, h4, h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.main-header.navbar, .brand-link { background-color: var(--sae-teal) !important; }
+.main-sidebar { background-color: var(--sae-slate) !important; }
+.sidebar .nav-link.active { background-color: var(--sae-teal) !important; color: #fff !important; }
+.btn-primary { background-color: var(--sae-teal); border-color: var(--sae-teal); }
+.btn-primary:hover { background-color: var(--sae-orange); border-color: var(--sae-orange); }
+.btn-danger { background-color: var(--sae-orange); border-color: var(--sae-orange); }
+.card-primary:not(.card-outline) > .card-header { background-color: var(--sae-teal); }
+.content-wrapper { background-color: #f8fffe; color: var(--sae-slate); }
+.nav-tabs .nav-link.active { border-top: 3px solid var(--sae-orange); color: var(--sae-slate); }
+a { color: var(--sae-teal); }

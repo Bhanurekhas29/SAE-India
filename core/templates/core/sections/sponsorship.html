@@ -1,0 +1,31 @@
+{% if sponsorship %}
+<section class="section sponsorship" id="{{ sponsorship.menu_anchor }}"{% if sponsorship.background_image %} style="--sp-bg:url('{{ sponsorship.background_image.url }}')"{% endif %}>
+  <div class="container">
+    <header class="sec-head sec-head-row reveal">
+      <div>
+        {% if sponsorship.pill_text %}<span class="pill pill-orange">{% if sponsorship.pill_icon %}<span class="material-symbols-outlined pill-icon">{{ sponsorship.pill_icon }}</span>{% endif %}{{ sponsorship.pill_text }}</span>{% endif %}
+        <h2 class="sec-title">{{ sponsorship.heading }}</h2>
+        {% if sponsorship.subtext %}<p class="sec-text">{{ sponsorship.subtext }}</p>{% endif %}
+      </div>
+      {% if sponsorship.show_tagline and sponsorship.tagline_list %}
+      <p class="tagline-line">{% for w in sponsorship.tagline_list %}<span>{{ w }}</span>{% if not forloop.last %}<i>/</i>{% endif %}{% endfor %}</p>
+      {% endif %}
+    </header>
+    <div class="pkg-grid">
+      {% for p in sponsorship.packages_live %}
+      <article class="pkg reveal{% if p.is_featured %} is-featured{% endif %}">
+        <span class="pkg-num">{{ forloop.counter|stringformat:"02d" }}</span>
+        <div class="pkg-head">
+          <span class="tier">{{ p.tier_label }}</span>
+          <h3>{{ p.title }}</h3>
+          <p class="pkg-price">{{ p.currency_symbol }}{{ p.price }}{% if p.price_unit %} <small>{{ p.price_unit }}</small>{% endif %}</p>
+          <p class="pkg-desc">{{ p.description }}</p>
+        </div>
+        <ul class="check-list">{% for b in p.benefit_list %}<li><span class="material-symbols-outlined">check_circle</span>{{ b }}</li>{% endfor %}</ul>
+        <a class="btn btn-orange btn-block" href="{{ p.button_link }}">{{ p.button_text }}<span class="material-symbols-outlined">arrow_forward</span></a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,27 @@
+{% if takeaways %}
+<section class="section takeaways" id="{{ takeaways.menu_anchor }}">
+  <div class="container">
+    <header class="sec-head sec-head-row reveal">
+      <div>
+        {% if takeaways.pill_text %}<span class="pill pill-dark">{% if takeaways.pill_show_dot %}<i class="dot"></i>{% endif %}{{ takeaways.pill_text }}</span>{% endif %}
+        <h2 class="sec-title">{{ takeaways.heading }}</h2>
+        {% if takeaways.subtext %}<p class="sec-text">{{ takeaways.subtext }}</p>{% endif %}
+      </div>
+      {% if takeaways.show_link and takeaways.link_text %}<a class="link-arrow" href="{{ takeaways.link_url }}">{{ takeaways.link_text }} <span class="material-symbols-outlined">arrow_forward</span></a>{% endif %}
+    </header>
+    <div class="take-grid">
+      {% for c in takeaways.cards_live %}
+      <article class="take-card reveal" style="--accent:{{ c.accent_color }}; --dot:{{ c.bullet_color }}">
+        <div class="take-top">
+          <span class="take-title"><span class="material-symbols-outlined">{{ c.icon }}</span>{{ c.title }}</span>
+          <span class="track">{% if c.track_label %}{{ c.track_label }}{% else %}Track {{ forloop.counter|stringformat:"02d" }}{% endif %}</span>
+        </div>
+        <p class="take-label">{{ c.values_label }}</p>
+        <ul class="take-list">{% for b in c.bullet_list %}<li>{{ b }}</li>{% endfor %}</ul>
+        {% if c.link_text %}<a class="take-link" href="{{ c.link_url }}">{{ c.link_text }} <span class="material-symbols-outlined">arrow_forward</span></a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

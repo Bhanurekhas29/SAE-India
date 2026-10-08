@@ -1,0 +1,32 @@
+{% load static %}{% if about %}
+<section class="section about" id="{{ about.menu_anchor }}">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <div class="about-photo">
+        {% if about.image %}<img src="{{ about.image.url }}" alt="{{ about.heading }}" loading="lazy">{% endif %}
+      </div>
+      <i class="orb orb-a"></i><i class="orb orb-b"></i>
+      {% if about.show_badge %}
+      <div class="about-badge">
+        <span class="material-symbols-outlined">{{ about.badge_icon }}</span>
+        <b>{{ about.badge_title }}</b>
+        <em>{{ about.badge_year }}</em>
+      </div>
+      {% endif %}
+    </div>
+    <div class="about-copy reveal">
+      {% if about.pill_text %}<span class="pill pill-mint"><span class="material-symbols-outlined pill-icon">target</span>{{ about.pill_text }}</span>{% endif %}
+      <h2 class="sec-title">{{ about.heading }}</h2>
+      <p class="sec-text">{{ about.description }}</p>
+      {% if about.stats_live %}
+      <div class="stat-cards">
+        {% for s in about.stats_live %}
+        <div class="stat-card"><span class="stat-ico material-symbols-outlined">{{ s.icon }}</span><div><b>{{ s.number }}</b><span>{{ s.label }}</span></div></div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if about.show_button and about.button_text %}<a class="btn btn-orange btn-grad" href="{{ about.button_link }}">{{ about.button_text }}</a>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
