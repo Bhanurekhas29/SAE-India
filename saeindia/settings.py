@@ -7,6 +7,13 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+try:
+    import MySQLdb  # noqa: F401  (mysqlclient, used locally when installed)
+except ImportError:  # production: pure-python driver, nothing to compile
+    import pymysql
+    pymysql.version_info = (2, 2, 1, 'final', 0)
+    pymysql.install_as_MySQLdb()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / '.env')
@@ -16,6 +23,20 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-dev-only')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') if h.strip()]
+
+# Railway gives the public domain in RAILWAY_PUBLIC_DOMAIN
+_railway_domain = os.getenv('RAILWAY_PUBLIC_DOMAIN', '').strip()
+if _railway_domain:
+    ALLOWED_HOSTS.append(_railway_domain)
+
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',') if o.strip()]
+if _railway_domain:
+    CSRF_TRUSTED_ORIGINS.append('https://' + _railway_domain)
+
+if not DEBUG:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 
 # Application definition
@@ -33,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -63,14 +85,22 @@ WSGI_APPLICATION = 'saeindia.wsgi.application'
 
 # Database (MySQL)
 
+def _env(*names, default=''):
+    for n in names:
+        v = os.getenv(n)
+        if v:
+            return v
+    return default
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME', 'sae_india_db'),
-        'USER': os.getenv('DB_USER', 'root'),
-        'PASSWORD': os.getenv('DB_PASSWORD', ''),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '3306'),
+        'NAME': _env('DB_NAME', 'MYSQLDATABASE', default='sae_india_db'),
+        'USER': _env('DB_USER', 'MYSQLUSER', default='root'),
+        'PASSWORD': _env('DB_PASSWORD', 'MYSQLPASSWORD'),
+        'HOST': _env('DB_HOST', 'MYSQLHOST', default='localhost'),
+        'PORT': _env('DB_PORT', 'MYSQLPORT', default='3306'),
         'OPTIONS': {
             'charset': 'utf8mb4',
         },
@@ -101,7 +131,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL = 'media/'
+STORAGES = {
+    'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'},
+    'staticfiles': {'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage'},
+}
+
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

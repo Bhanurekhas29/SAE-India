@@ -1,0 +1,4213 @@
+[
+{
+ "model": "core.headersettings",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "site_name": "SAE India",
+  "logo": "header/saeindia-logo.png",
+  "show_button": true,
+  "button_text": "Register Now",
+  "button_link": "#contact",
+  "button_new_tab": false
+ }
+},
+{
+ "model": "core.menuitem",
+ "pk": 1,
+ "fields": {
+  "header": 1,
+  "label": "Home",
+  "link": "#home",
+  "open_in_new_tab": false,
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.menuitem",
+ "pk": 2,
+ "fields": {
+  "header": 1,
+  "label": "About",
+  "link": "#about",
+  "open_in_new_tab": false,
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.menuitem",
+ "pk": 3,
+ "fields": {
+  "header": 1,
+  "label": "Topics",
+  "link": "#topics",
+  "open_in_new_tab": false,
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.menuitem",
+ "pk": 4,
+ "fields": {
+  "header": 1,
+  "label": "Sponsors",
+  "link": "#partners",
+  "open_in_new_tab": false,
+  "order": 4,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.menuitem",
+ "pk": 5,
+ "fields": {
+  "header": 1,
+  "label": "Gallery",
+  "link": "#gallery",
+  "open_in_new_tab": false,
+  "order": 5,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.menuitem",
+ "pk": 6,
+ "fields": {
+  "header": 1,
+  "label": "Contact",
+  "link": "#contact",
+  "open_in_new_tab": false,
+  "order": 6,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.herosection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "home",
+  "pill_text": "GLOBAL AUTOMOTIVE TECHNOLOGY CONFERENCE",
+  "pill_show_dot": true,
+  "heading_pre": "Auto",
+  "heading_highlight": "Performance",
+  "heading_post": "Automotive Engineering Conference",
+  "show_countdown": false,
+  "edition_label": "23RD EDITION",
+  "event_datetime": "2026-11-13T03:30:00Z",
+  "countdown_ended_text": "Event started",
+  "primary_button_text": "Register Now",
+  "primary_button_link": "#contact",
+  "show_primary_button": true,
+  "secondary_button_text": "Learn More",
+  "secondary_button_link": "#about",
+  "show_secondary_button": true,
+  "background_image": "hero/Neon_Velocity__Futuristic_City_Drive.png",
+  "overlay_text": "Shaping the Future of Mobility"
+ }
+},
+{
+ "model": "core.herotagline",
+ "pk": 1,
+ "fields": {
+  "hero": 1,
+  "text": "Innovation",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.herotagline",
+ "pk": 2,
+ "fields": {
+  "hero": 1,
+  "text": "Sustainability",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.herotagline",
+ "pk": 3,
+ "fields": {
+  "hero": 1,
+  "text": "Next-Gen Mobility",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.heroinfochip",
+ "pk": 1,
+ "fields": {
+  "hero": 1,
+  "icon": "calendar_month",
+  "text": "Nov 13-14, 2026",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.heroinfochip",
+ "pk": 2,
+ "fields": {
+  "hero": 1,
+  "icon": "location_on",
+  "text": "Grand Horizon Convention Center, New York, USA",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.aboutsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "about",
+  "pill_text": "ABOUT THE CONFERENCE",
+  "heading": "Driving Innovation in Automotive Engineering",
+  "description": "Auto Performance brings together global industry leaders, engineers, researchers and innovators to explore the latest advancements in automotive technology, sustainability and next-generation mobility solutions.",
+  "image": "about/Exhibition_Hall.png",
+  "show_badge": true,
+  "badge_icon": "directions_car",
+  "badge_title": "AUTO PERFORMANCE",
+  "badge_year": "2025",
+  "show_button": true,
+  "button_text": "Register Now",
+  "button_link": "#contact"
+ }
+},
+{
+ "model": "core.aboutstat",
+ "pk": 1,
+ "fields": {
+  "about": 1,
+  "icon": "calendar_month",
+  "number": "3 Days",
+  "label": "Conference",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.aboutstat",
+ "pk": 2,
+ "fields": {
+  "about": 1,
+  "icon": "school",
+  "number": "50+",
+  "label": "Expert Speakers",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.aboutstat",
+ "pk": 3,
+ "fields": {
+  "about": 1,
+  "icon": "groups",
+  "number": "1,000+",
+  "label": "Attendees",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topicssection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "topics",
+  "eyebrow": "TECHNICAL CONCEPTS",
+  "heading_pre": "Technical Topics &",
+  "heading_highlight": "Innovation Tracks",
+  "subtext": "Explore the latest advancements in automotive technology, sustainability, and next-generation mobility solutions."
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/ant-design_car-filled.png",
+  "title": "Future Powertrains – Innovations in ICE, Electrification, Hydrogen and Other Energy Conversion Systems",
+  "description": "Electric Vehicles (EVs), Hybrid Powertrains, Hydrogen and Fuel Cell Technologies, Energy Storage Systems and Powertrain Energy Management",
+  "image": "topics/car_1.png",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card2.png",
+  "title": "Automated, Connected, Safe and Smart Mobility Automated.",
+  "description": "Advanced Driver Assistance Systems (ADAS) and Automated Driving Systems, Connected Mobility and V2X Communication, Intelligent Transport and Smart Mobility Systems, Emerging Transportation Technologies, App- and Service-Based Ecosystem, Monetisation Models,",
+  "image": "topics/car_2.png",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card3.png",
+  "title": "Vehicle Dynamics, Control and Performance",
+  "description": "Dynamic Performance, Chassis Tuning, NVH Optimisation, Ride Comfort and Perceived Quality",
+  "image": "topics/car3.png",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card4.png",
+  "title": "Standards, Regulations and Policy Impact on Vehicles",
+  "description": "Harmonisation Trends, Regulation Led Vehicle Development, Technology Neutrality and Innovation",
+  "image": "topics/car4.png",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 5,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card5.png",
+  "title": "Materials, Light Weighting and Cost-Effective Manufacturing Technologies",
+  "description": "Advanced Materials, Lightweight Design Strategies, Design for Manufacturability, Scalable Production Technologies",
+  "image": "topics/car5.png",
+  "order": 5,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 6,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card6.png",
+  "title": "Human Factors, Ergonomics and User-Centric Vehicle Design",
+  "description": "Driver and Occupant Ergonomics, In-Cabin Comfort, Perceived Quality",
+  "image": "topics/car6.png",
+  "order": 6,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 7,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card7.png",
+  "title": "Cybersecurity and AI-Enabled Vehicles",
+  "description": "Vehicle Cyber-Security, Secure OTA/Software Compliance Mindset, AI Features in Vehicles",
+  "image": "topics/car7.png",
+  "order": 7,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 8,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card8.png",
+  "title": "Vehicle as a Digital Platform",
+  "description": "Vehicle Software and Electronics, Software-Defined Vehicles (SDVs), AI-Defined Vehicles",
+  "image": "topics/car8.png",
+  "order": 8,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 9,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card9.png",
+  "title": "Digital Transformation, Digital Twins and Smart Engineering for Faster Time-to-Market",
+  "description": "Digitalisation Strategies, Data-Driven Development, Virtual Engineering, Integrated Digital Workflows",
+  "image": "topics/car9.png",
+  "order": 9,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.topiccard",
+ "pk": 10,
+ "fields": {
+  "section": 1,
+  "icon_image": "topics/icons/card10.png",
+  "title": "Energy, Emissions, Environment, Circularity and Life Cycle Assessment (LCA)",
+  "description": "Tailpipe and Lifecycle Emissions, Circular Economy Strategies, Recyclable and Sustainable Materials, ESG Metrics",
+  "image": "topics/car9_RIdvZRC.png",
+  "order": 10,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.takeawayssection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "takeaways",
+  "pill_text": "Conference Highlights",
+  "pill_show_dot": true,
+  "heading": "Key Takeaways:",
+  "subtext": "Strategic multi-dimensional outcomes delivering high-value engagement across the mobility engineering ecosystem.",
+  "show_link": false,
+  "link_text": "View All Topics",
+  "link_url": "#topics"
+ }
+},
+{
+ "model": "core.takeawaycard",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "mic",
+  "title": "Speakers",
+  "track_label": "",
+  "values_label": "CORE VALUES",
+  "bullets": "Thought Leadership\nIndustry Influence\nKnowledge Sharing\nBrand Authority\nNetworking",
+  "link_text": "Join as Speaker",
+  "link_url": "#contact",
+  "accent_color": "#F59E0B",
+  "bullet_color": "#059669",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.takeawaycard",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "diversity_3",
+  "title": "Participants",
+  "track_label": "",
+  "values_label": "CORE VALUES",
+  "bullets": "Learning\nInsights\nNetworking\nExposure\nInnovation",
+  "link_text": "Register to Attend",
+  "link_url": "#contact",
+  "accent_color": "#06B6D4",
+  "bullet_color": "#0891B2",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.takeawaycard",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "apartment",
+  "title": "Exhibitors",
+  "track_label": "",
+  "values_label": "CORE VALUES",
+  "bullets": "Lead Generation\nBrand Visibility\nProduct Showcase\nCustomer Engagement\nMarket Reach",
+  "link_text": "Book a Booth",
+  "link_url": "#contact",
+  "accent_color": "#10B981",
+  "bullet_color": "#059669",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.takeawaycard",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "icon": "star",
+  "title": "Sponsors",
+  "track_label": "",
+  "values_label": "CORE VALUES",
+  "bullets": "Brand Recall\nVisibility\nPositioning\nPartnerships\nROI",
+  "link_text": "Explore Packages",
+  "link_url": "#sponsors",
+  "accent_color": "#84CC16",
+  "bullet_color": "#65A30D",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.gainsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "gain",
+  "pill_text": "Key Takeaways",
+  "pill_show_dot": true,
+  "heading": "What You'll Gain",
+  "show_video": true,
+  "video_thumbnail": "gain/Keynote_speaker_presentation.png",
+  "video_url": "",
+  "video_caption": "Learn, Network, Grow"
+ }
+},
+{
+ "model": "core.gaincard",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "memory",
+  "title": "Industry Insights",
+  "description": "Latest trends & future opportunities.",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.gaincard",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "menu_book",
+  "title": "Practical Knowledge",
+  "description": "Real-world case studies & solutions.",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.gaincard",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "diversity_3",
+  "title": "Networking",
+  "description": "Connect with global industry leaders.",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.gaincard",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "icon": "trending_up",
+  "title": "Business Growth",
+  "description": "New partnerships & collaborations.",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeesection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "committee"
+ }
+},
+{
+ "model": "core.committee",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "pill_text": "Members",
+  "pill_show_dot": true,
+  "title": "Steering Committee",
+  "background_image": "committees/car_2.png",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committee",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "pill_text": "Members",
+  "pill_show_dot": true,
+  "title": "Organizing Committee",
+  "background_image": "committees/car9.png",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committee",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "pill_text": "Members",
+  "pill_show_dot": true,
+  "title": "Technical Committee",
+  "background_image": "committees/car_1.png",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 1,
+ "fields": {
+  "name": "Mr. C.V. Raman",
+  "designation": "Executive Committee Member & Former CTO, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 2,
+ "fields": {
+  "name": "Dr. G. Nagarajan",
+  "designation": "President, SAEINDIA, & Independent Director, SPEL Semiconductor Ltd.",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 3,
+ "fields": {
+  "name": "Mr. Javaji Munirathnam",
+  "designation": "Senior VP, SAEINDIA, & Founder and CEO Javaji M Consulting",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 4,
+ "fields": {
+  "name": "Mrs. Rashmi Urdhwareshe",
+  "designation": "Former Director, ARAI and Independent, & Director, STL (Sterling Tools)",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 5,
+ "fields": {
+  "name": "Dr. Reji Mathai",
+  "designation": "Director, Automotive Research Association of India (ARAI)",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 6,
+ "fields": {
+  "name": "Mr. Saurabh Dalela",
+  "designation": "Director, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 7,
+ "fields": {
+  "name": "Dr. Manish Jaiswal",
+  "designation": "Director, NATRAX",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 8,
+ "fields": {
+  "name": "Mr. Guruprasad Mudlapur",
+  "designation": "President, Bosch Group in India and Managing Director, Bosch Ltd",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 9,
+ "fields": {
+  "name": "Mr. Murli. M. Iyer",
+  "designation": "Founding Member & Global Advisor, SAEINDIA President & CEO, Global Advisory Group LLC",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 10,
+ "fields": {
+  "name": "Mr. Inala Veerbhadra Rao",
+  "designation": "Distinguished Fellow, TERI",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 11,
+ "fields": {
+  "name": "Mr. Tarun Aggarwal",
+  "designation": "Sr EO - Head of Engineering, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 12,
+ "fields": {
+  "name": "Mr. R. Velusamy",
+  "designation": "President, Automotive Technology & Product Development, M&M Ltd",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 13,
+ "fields": {
+  "name": "Dr. Saravanan",
+  "designation": "President & Chief Technology Officer, Ashok Leyland",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 14,
+ "fields": {
+  "name": "Dr. Tapan Sahoo",
+  "designation": "Executive Officer, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 15,
+ "fields": {
+  "name": "Dr. Arun Jaura",
+  "designation": "Chief Technology Officer, JK Tyre & Industries",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 16,
+ "fields": {
+  "name": "Mr. N. Balasubramanian",
+  "designation": "Vice President - Product Engineering, RNTBCI",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 17,
+ "fields": {
+  "name": "Mr. Anurag Garg",
+  "designation": "Managing Director & Country Head India, Vitesco Technologies (Retd.)",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 18,
+ "fields": {
+  "name": "Mr. Rakesh Bidre",
+  "designation": "Vice President, TCS",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 19,
+ "fields": {
+  "name": "Ms. Latha Chembrakalam",
+  "designation": "Founder & CEO, AutoAscend Pvt. Ltd.",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 20,
+ "fields": {
+  "name": "Mr. Dinesh Tyagi",
+  "designation": "Founder & Managing Director, Dinty Autotech Pvt. Ltd.",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 21,
+ "fields": {
+  "name": "Mr. N. R. Girish",
+  "designation": "Vice President, R&D E-Mobility Asia Pacific, Schaeffler",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 22,
+ "fields": {
+  "name": "Mr. Dinesh Shyamsundar",
+  "designation": "CTO, EVage Automotive Pvt. Ltd.",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 23,
+ "fields": {
+  "name": "Dr. A S Ramadhas",
+  "designation": "Director, GARC",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 24,
+ "fields": {
+  "name": "Mr. Anoop Bhat",
+  "designation": "Executive Officer, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 25,
+ "fields": {
+  "name": "Mr. Deepak Sawkar",
+  "designation": "Senior VP, Maruti Suzuki India Limited (Retd.)",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 26,
+ "fields": {
+  "name": "Dr. Madhusudan Joshi",
+  "designation": "Head - Technology & Business, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 27,
+ "fields": {
+  "name": "Mr. S. Ramanathan",
+  "designation": "Managing Director, Automotive Test Systems (ATS)",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 28,
+ "fields": {
+  "name": "Mr. M. Dhananjayan",
+  "designation": "Founder & CEO, Focus Engineering",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 29,
+ "fields": {
+  "name": "Mr. S. Damodaran",
+  "designation": "CEO, ChipEdge Technologies Pvt. Ltd.",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 30,
+ "fields": {
+  "name": "Mr. Sanjay Nibhandhe",
+  "designation": "Professor of Practice, Sri Vishnu Education Society",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 31,
+ "fields": {
+  "name": "Mr. Mahesh Babu",
+  "designation": "Managing Director - Olectra Greentech Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 32,
+ "fields": {
+  "name": "Mr. Chris Mason",
+  "designation": "Chief Executive Officer, FISITA",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 33,
+ "fields": {
+  "name": "Mr. Abhijit Bora",
+  "designation": "Vice President, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 34,
+ "fields": {
+  "name": "Mr. Nishant Sarna",
+  "designation": "Sr General Manager, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 35,
+ "fields": {
+  "name": "Dr. B. V. Shamsundara",
+  "designation": "Senior Deputy Director, ARAI",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 36,
+ "fields": {
+  "name": "Mr. Praveensingh Jadhav",
+  "designation": "General Manager, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 37,
+ "fields": {
+  "name": "Mr. Ajay Kumar",
+  "designation": "Sr. VP, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 38,
+ "fields": {
+  "name": "Mr. Arun Kumar Goel",
+  "designation": "VP, Subros (Retd.)",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 39,
+ "fields": {
+  "name": "Mr. Pritam Singh",
+  "designation": "Sr. Manager, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 40,
+ "fields": {
+  "name": "Mr. Piyush Jain",
+  "designation": "Sr. General Manager, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 41,
+ "fields": {
+  "name": "Mr. Saurabh Maggu",
+  "designation": "General Manager, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 42,
+ "fields": {
+  "name": "Mr. Prashant Vijay",
+  "designation": "Deputy General Manager - ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 43,
+ "fields": {
+  "name": "Mr. Jayawant Hardikar",
+  "designation": "Head - CMVR, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 44,
+ "fields": {
+  "name": "Mr. C. Pradeep",
+  "designation": "Associate Director, OLA Electric Technologies",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 45,
+ "fields": {
+  "name": "Mr. N. K. Vaidya",
+  "designation": "Senior General Manager, Tata Motors",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 46,
+ "fields": {
+  "name": "Mr. Prakash Sardesai",
+  "designation": "Vice President, Professional & Faculty Development Board, SAEINDIA",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 47,
+ "fields": {
+  "name": "Mr. U. D. Bhangale",
+  "designation": "Executive Director, SAEINDIA Northern Section",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 48,
+ "fields": {
+  "name": "Mr. Abhishek Thakur",
+  "designation": "Executive, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 49,
+ "fields": {
+  "name": "Dr. K. C. Vora",
+  "designation": "Director Auto CoE, NAMTECH",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 50,
+ "fields": {
+  "name": "Mr. R. Vijayalayan",
+  "designation": "Senior Manager, MathWorks",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 51,
+ "fields": {
+  "name": "Mr. Vijai Gopalakrishnan",
+  "designation": "Senior Network Consultant, TCS",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 52,
+ "fields": {
+  "name": "Ms. Ujjwala Karle",
+  "designation": "Deputy Director - Technology Group, ARAI",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 53,
+ "fields": {
+  "name": "Ms. Rajni Bagga",
+  "designation": "General Manager, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 54,
+ "fields": {
+  "name": "Ms. Abha Rani",
+  "designation": "General Manager, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 55,
+ "fields": {
+  "name": "Mr. Avinash Gupta",
+  "designation": "General Manager, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 56,
+ "fields": {
+  "name": "Mr. Amit Karwal",
+  "designation": "Deputy General Manager, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 57,
+ "fields": {
+  "name": "Mr. Prashant Vishe",
+  "designation": "Senior Manager, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 58,
+ "fields": {
+  "name": "Mr. Deepak Joshi",
+  "designation": "Manager, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 59,
+ "fields": {
+  "name": "Mr. Gopal Singh Rathore",
+  "designation": "Deputy Manager, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 60,
+ "fields": {
+  "name": "Mr. Sitikantha Padhy",
+  "designation": "Manager, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 61,
+ "fields": {
+  "name": "Dr. N. Karuppaiah",
+  "designation": "Senior Project Advisor, CAAR - IIT Madras",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 62,
+ "fields": {
+  "name": "Mr. Saravanan Thulasi",
+  "designation": "Technical Information Specialist, John Deere",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 63,
+ "fields": {
+  "name": "Mr. Ankit Trivedi",
+  "designation": "Manager, ICAT",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeemember",
+ "pk": 64,
+ "fields": {
+  "name": "Mr. Avnish Gosain",
+  "designation": "Vice President, Maruti Suzuki India Limited",
+  "photo": "",
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 1,
+ "fields": {
+  "member": 1,
+  "committee": 1,
+  "role": "Patron",
+  "order": 1,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 2,
+ "fields": {
+  "member": 2,
+  "committee": 1,
+  "role": "SC Chair",
+  "order": 2,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 3,
+ "fields": {
+  "member": 3,
+  "committee": 1,
+  "role": "Member",
+  "order": 3,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 4,
+ "fields": {
+  "member": 4,
+  "committee": 1,
+  "role": "Member",
+  "order": 4,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 5,
+ "fields": {
+  "member": 5,
+  "committee": 1,
+  "role": "Member",
+  "order": 5,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 6,
+ "fields": {
+  "member": 6,
+  "committee": 1,
+  "role": "OC - Chair",
+  "order": 6,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 7,
+ "fields": {
+  "member": 7,
+  "committee": 1,
+  "role": "Member",
+  "order": 7,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 8,
+ "fields": {
+  "member": 8,
+  "committee": 1,
+  "role": "Member",
+  "order": 8,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 9,
+ "fields": {
+  "member": 9,
+  "committee": 1,
+  "role": "Member",
+  "order": 9,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 10,
+ "fields": {
+  "member": 10,
+  "committee": 1,
+  "role": "Member",
+  "order": 10,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 11,
+ "fields": {
+  "member": 11,
+  "committee": 1,
+  "role": "Member",
+  "order": 11,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 12,
+ "fields": {
+  "member": 12,
+  "committee": 1,
+  "role": "Member",
+  "order": 12,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 13,
+ "fields": {
+  "member": 13,
+  "committee": 1,
+  "role": "Member",
+  "order": 13,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 14,
+ "fields": {
+  "member": 14,
+  "committee": 1,
+  "role": "Member",
+  "order": 14,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 15,
+ "fields": {
+  "member": 15,
+  "committee": 1,
+  "role": "Member",
+  "order": 15,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 16,
+ "fields": {
+  "member": 16,
+  "committee": 1,
+  "role": "Member",
+  "order": 16,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 17,
+ "fields": {
+  "member": 17,
+  "committee": 1,
+  "role": "Member",
+  "order": 17,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 18,
+ "fields": {
+  "member": 18,
+  "committee": 1,
+  "role": "Member",
+  "order": 18,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 19,
+ "fields": {
+  "member": 19,
+  "committee": 1,
+  "role": "Member",
+  "order": 19,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 20,
+ "fields": {
+  "member": 20,
+  "committee": 1,
+  "role": "Member",
+  "order": 20,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 21,
+ "fields": {
+  "member": 21,
+  "committee": 1,
+  "role": "Member",
+  "order": 21,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 22,
+ "fields": {
+  "member": 22,
+  "committee": 1,
+  "role": "Member",
+  "order": 22,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 23,
+ "fields": {
+  "member": 23,
+  "committee": 1,
+  "role": "Member",
+  "order": 23,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 24,
+ "fields": {
+  "member": 24,
+  "committee": 1,
+  "role": "Co Convenor",
+  "order": 24,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 25,
+ "fields": {
+  "member": 25,
+  "committee": 1,
+  "role": "Chair - Technical & Publication",
+  "order": 25,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 26,
+ "fields": {
+  "member": 26,
+  "committee": 1,
+  "role": "Member",
+  "order": 26,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 27,
+ "fields": {
+  "member": 27,
+  "committee": 1,
+  "role": "Chair - Event Management",
+  "order": 27,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 28,
+ "fields": {
+  "member": 28,
+  "committee": 1,
+  "role": "Chair - TechHive",
+  "order": 28,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 29,
+ "fields": {
+  "member": 29,
+  "committee": 1,
+  "role": "Chair - Media & Comm.",
+  "order": 29,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 30,
+ "fields": {
+  "member": 30,
+  "committee": 1,
+  "role": "Chair - Industry Interface",
+  "order": 30,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 31,
+ "fields": {
+  "member": 31,
+  "committee": 1,
+  "role": "Member",
+  "order": 31,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 32,
+ "fields": {
+  "member": 32,
+  "committee": 1,
+  "role": "Member",
+  "order": 32,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 33,
+ "fields": {
+  "member": 6,
+  "committee": 2,
+  "role": "Chair",
+  "order": 1,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 34,
+ "fields": {
+  "member": 26,
+  "committee": 2,
+  "role": "Convenor",
+  "order": 2,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 35,
+ "fields": {
+  "member": 24,
+  "committee": 2,
+  "role": "Co Convenor",
+  "order": 3,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 36,
+ "fields": {
+  "member": 28,
+  "committee": 2,
+  "role": "Secretariat & Chair - TechHive",
+  "order": 4,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 37,
+ "fields": {
+  "member": 33,
+  "committee": 2,
+  "role": "Core Member",
+  "order": 5,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 38,
+ "fields": {
+  "member": 34,
+  "committee": 2,
+  "role": "Core Member",
+  "order": 6,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 39,
+ "fields": {
+  "member": 35,
+  "committee": 2,
+  "role": "Core Member",
+  "order": 7,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 40,
+ "fields": {
+  "member": 36,
+  "committee": 2,
+  "role": "Core Member",
+  "order": 8,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 41,
+ "fields": {
+  "member": 25,
+  "committee": 2,
+  "role": "Chair - Tech. & Publication",
+  "order": 9,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 42,
+ "fields": {
+  "member": 37,
+  "committee": 2,
+  "role": "Co Chair - Tech. & Publication",
+  "order": 10,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 43,
+ "fields": {
+  "member": 38,
+  "committee": 2,
+  "role": "Co Chair - Tech. & Publication",
+  "order": 11,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 44,
+ "fields": {
+  "member": 27,
+  "committee": 2,
+  "role": "Chair - Event Management",
+  "order": 12,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 45,
+ "fields": {
+  "member": 39,
+  "committee": 2,
+  "role": "Co Chair - Event Management",
+  "order": 13,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 46,
+ "fields": {
+  "member": 40,
+  "committee": 2,
+  "role": "Co Chair - Event Management",
+  "order": 14,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 47,
+ "fields": {
+  "member": 41,
+  "committee": 2,
+  "role": "Member - Event Management",
+  "order": 15,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 48,
+ "fields": {
+  "member": 29,
+  "committee": 2,
+  "role": "Chair - Media & Comm.",
+  "order": 16,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 49,
+ "fields": {
+  "member": 42,
+  "committee": 2,
+  "role": "Chair - Finance Committee",
+  "order": 17,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 50,
+ "fields": {
+  "member": 43,
+  "committee": 2,
+  "role": "Chair - Sponsorship",
+  "order": 18,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 51,
+ "fields": {
+  "member": 44,
+  "committee": 2,
+  "role": "Co Chair - TechHive",
+  "order": 19,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 52,
+ "fields": {
+  "member": 45,
+  "committee": 2,
+  "role": "Member",
+  "order": 20,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 53,
+ "fields": {
+  "member": 46,
+  "committee": 2,
+  "role": "Member",
+  "order": 21,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 54,
+ "fields": {
+  "member": 47,
+  "committee": 2,
+  "role": "Member",
+  "order": 22,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 55,
+ "fields": {
+  "member": 48,
+  "committee": 2,
+  "role": "Member - Event Management",
+  "order": 23,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 56,
+ "fields": {
+  "member": 30,
+  "committee": 2,
+  "role": "Chair - Industry Interface",
+  "order": 24,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 57,
+ "fields": {
+  "member": 49,
+  "committee": 2,
+  "role": "Chair - Institute Interface",
+  "order": 25,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 58,
+ "fields": {
+  "member": 25,
+  "committee": 3,
+  "role": "Chair - Tech. & Publication",
+  "order": 1,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 59,
+ "fields": {
+  "member": 37,
+  "committee": 3,
+  "role": "Co Chair - Tech. & Publication",
+  "order": 2,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 60,
+ "fields": {
+  "member": 38,
+  "committee": 3,
+  "role": "Co Chair - Tech. & Publication",
+  "order": 3,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 61,
+ "fields": {
+  "member": 50,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 4,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 62,
+ "fields": {
+  "member": 51,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 5,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 63,
+ "fields": {
+  "member": 52,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 6,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 64,
+ "fields": {
+  "member": 53,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 7,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 65,
+ "fields": {
+  "member": 54,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 8,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 66,
+ "fields": {
+  "member": 55,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 9,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 67,
+ "fields": {
+  "member": 56,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 10,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 68,
+ "fields": {
+  "member": 57,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 11,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 69,
+ "fields": {
+  "member": 46,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 12,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 70,
+ "fields": {
+  "member": 58,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 13,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 71,
+ "fields": {
+  "member": 59,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 14,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 72,
+ "fields": {
+  "member": 60,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 15,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 73,
+ "fields": {
+  "member": 61,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 16,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 74,
+ "fields": {
+  "member": 62,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 17,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 75,
+ "fields": {
+  "member": 63,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 18,
+  "is_active": true
+ }
+},
+{
+ "model": "core.committeerole",
+ "pk": 76,
+ "fields": {
+  "member": 64,
+  "committee": 3,
+  "role": "Member - Tech. & Publication",
+  "order": 19,
+  "is_active": true
+ }
+},
+{
+ "model": "core.statssection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "stats",
+  "background_image": "",
+  "hover_color": "#FCD34D"
+ }
+},
+{
+ "model": "core.statitem",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "number": "2,000",
+  "suffix": "+",
+  "label": "VISITORS",
+  "description": "Regional mobility delegates & industry observers",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.statitem",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "number": "1,000",
+  "suffix": "+",
+  "label": "DELEGATES",
+  "description": "Registered engineers, executives & scholars",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.statitem",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "number": "200",
+  "suffix": "+",
+  "label": "TECHNICAL PRESENTATIONS",
+  "description": "Peer-reviewed automotive engineering papers",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.statitem",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "number": "80",
+  "suffix": "+",
+  "label": "EXHIBITORS",
+  "description": "Global Tier-1 suppliers, OEMs & deep-tech labs",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.sponsorshipsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "sponsors",
+  "pill_icon": "workspace_premium",
+  "pill_text": "Sponsorship Opportunities",
+  "heading": "Sponsorship Details",
+  "subtext": "Partner with AutoPerformance and showcase your brand to a global audience of industry leaders, innovators and decision-makers.",
+  "show_tagline": true,
+  "tagline_words": "Partner, Grow, Lead",
+  "background_image": "sponsorship/car3.png"
+ }
+},
+{
+ "model": "core.sponsorpackage",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "tier_label": "PLATINUM",
+  "title": "Platinum Sponsor",
+  "currency_symbol": "$",
+  "price": "25,000",
+  "price_unit": "/USD",
+  "description": "Maximum brand exposure and premium positioning.",
+  "benefits": "Logo on all materials\r\nKeynote speaking slot\r\nVIP access (10 passes)\r\nDedicated brand feature",
+  "button_text": "Get Started",
+  "button_link": "#contact",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.sponsorpackage",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "tier_label": "GOLD",
+  "title": "Gold Sponsor",
+  "currency_symbol": "$",
+  "price": "15,000",
+  "price_unit": "/USD",
+  "description": "High visibility and strong brand presence.",
+  "benefits": "Logo on website\r\nPanel discussion slot\r\n5 VIP passes\r\nEmail campaign feature",
+  "button_text": "Get Started",
+  "button_link": "#contact",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.sponsorpackage",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "tier_label": "SILVER",
+  "title": "Silver Sponsor",
+  "currency_symbol": "$",
+  "price": "10,000",
+  "price_unit": "/USD",
+  "description": "Valuable exposure to our engaged audience.",
+  "benefits": "Logo on website\r\nSocial media mentions\r\n3 VIP passes\r\nNewsletter feature",
+  "button_text": "Get Started",
+  "button_link": "#contact",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.sponsorpackage",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "tier_label": "BRONZE",
+  "title": "Bronze Sponsor",
+  "currency_symbol": "$",
+  "price": "5,000",
+  "price_unit": "/USD",
+  "description": "Grow your brand with targeted visibility.",
+  "benefits": "Logo on website\r\n2 VIP passes\r\nEvent signage\r\nSocial media mention",
+  "button_text": "Get Started",
+  "button_link": "#contact",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.sponsorpackage",
+ "pk": 5,
+ "fields": {
+  "section": 1,
+  "tier_label": "SUPPORTER",
+  "title": "Supporter Sponsor",
+  "currency_symbol": "$",
+  "price": "2,500",
+  "price_unit": "/USD",
+  "description": "Be part of the movement and make an impact.",
+  "benefits": "Logo on website\r\nEvent signage\r\nThank you mention\r\nCommunity recognition",
+  "button_text": "Get Started",
+  "button_link": "#contact",
+  "order": 5,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "deliverables",
+  "title": "EXECUTIVE DELIVERABLES MATRIX",
+  "note": "Full brochure comparison across 5 official tiers",
+  "first_column_title": "Deliverables & Entitlements"
+ }
+},
+{
+ "model": "core.matrixtier",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "name": "Title Sponsor",
+  "price": "₹25,00,000",
+  "is_highlighted": true,
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixtier",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "name": "Platinum",
+  "price": "₹15,00,000",
+  "is_highlighted": false,
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixtier",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "name": "Gold",
+  "price": "₹10,00,000",
+  "is_highlighted": false,
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixtier",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "name": "Silver",
+  "price": "₹6,00,000",
+  "is_highlighted": false,
+  "order": 4,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixtier",
+ "pk": 5,
+ "fields": {
+  "section": 1,
+  "name": "Bronze",
+  "price": "₹3,00,000",
+  "is_highlighted": false,
+  "order": 5,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixcategory",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "title": "1. EXECUTIVE & THOUGHT LEADERSHIP PRESENCE",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixcategory",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "title": "2. BRANDING, COLLATERAL & MEDIA EXPOSURE",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixcategory",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "title": "3. EXPOSITION FOOTPRINT & HOSPITALITY",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 1,
+ "fields": {
+  "category": 1,
+  "label": "Presence at Keynote / Plenary Session",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 2,
+ "fields": {
+  "category": 1,
+  "label": "Presence at Technical Session",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 3,
+ "fields": {
+  "category": 2,
+  "label": "Logo in Event Backdrop & other marketing",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 4,
+ "fields": {
+  "category": 2,
+  "label": "Sponsor Promo Video to be played during breaks",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 5,
+ "fields": {
+  "category": 2,
+  "label": "Brochure / pamphlet in all delegate kits",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 6,
+ "fields": {
+  "category": 3,
+  "label": "Exposition Booth",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 7,
+ "fields": {
+  "category": 3,
+  "label": "Complimentary Delegates",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixrow",
+ "pk": 8,
+ "fields": {
+  "category": 3,
+  "label": "VIP Lounge Access",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 1,
+ "fields": {
+  "row": 1,
+  "tier": 1,
+  "style": "bold",
+  "text": "Inaugural / Valedictory",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 2,
+ "fields": {
+  "row": 1,
+  "tier": 2,
+  "style": "text",
+  "text": "Keynote",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 3,
+ "fields": {
+  "row": 1,
+  "tier": 3,
+  "style": "text",
+  "text": "Panel Discussion",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 4,
+ "fields": {
+  "row": 1,
+  "tier": 4,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 5,
+ "fields": {
+  "row": 1,
+  "tier": 5,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 6,
+ "fields": {
+  "row": 2,
+  "tier": 1,
+  "style": "bold",
+  "text": "Chair / Keynote",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 7,
+ "fields": {
+  "row": 2,
+  "tier": 2,
+  "style": "text",
+  "text": "Chair / Keynote",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 8,
+ "fields": {
+  "row": 2,
+  "tier": 3,
+  "style": "text",
+  "text": "Chair of Session",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 9,
+ "fields": {
+  "row": 2,
+  "tier": 4,
+  "style": "text",
+  "text": "Chair of Session",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 10,
+ "fields": {
+  "row": 2,
+  "tier": 5,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 11,
+ "fields": {
+  "row": 3,
+  "tier": 1,
+  "style": "badge",
+  "text": "Large logo",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 12,
+ "fields": {
+  "row": 3,
+  "tier": 2,
+  "style": "badge",
+  "text": "Medium logo",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 13,
+ "fields": {
+  "row": 3,
+  "tier": 3,
+  "style": "text",
+  "text": "Small logo",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 14,
+ "fields": {
+  "row": 3,
+  "tier": 4,
+  "style": "text",
+  "text": "Small logo",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 15,
+ "fields": {
+  "row": 3,
+  "tier": 5,
+  "style": "text",
+  "text": "Small logo",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 16,
+ "fields": {
+  "row": 4,
+  "tier": 1,
+  "style": "bold",
+  "text": "3 mins video",
+  "subtext": "4 times a day"
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 17,
+ "fields": {
+  "row": 4,
+  "tier": 2,
+  "style": "text",
+  "text": "3 mins video",
+  "subtext": "3 times a day"
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 18,
+ "fields": {
+  "row": 4,
+  "tier": 3,
+  "style": "text",
+  "text": "1 mins video",
+  "subtext": "3 times a day"
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 19,
+ "fields": {
+  "row": 4,
+  "tier": 4,
+  "style": "text",
+  "text": "1 mins video",
+  "subtext": "2 times a day"
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 20,
+ "fields": {
+  "row": 4,
+  "tier": 5,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 21,
+ "fields": {
+  "row": 5,
+  "tier": 1,
+  "style": "yes",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 22,
+ "fields": {
+  "row": 5,
+  "tier": 2,
+  "style": "yes",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 23,
+ "fields": {
+  "row": 5,
+  "tier": 3,
+  "style": "yes",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 24,
+ "fields": {
+  "row": 5,
+  "tier": 4,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 25,
+ "fields": {
+  "row": 5,
+  "tier": 5,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 26,
+ "fields": {
+  "row": 6,
+  "tier": 1,
+  "style": "bold",
+  "text": "36 sq. mtr. Expo Space (Raw)",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 27,
+ "fields": {
+  "row": 6,
+  "tier": 2,
+  "style": "text",
+  "text": "18 sq. mtr. Expo Space (Raw space)",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 28,
+ "fields": {
+  "row": 6,
+  "tier": 3,
+  "style": "text",
+  "text": "9 sq. mtr. Expo Space (Raw)",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 29,
+ "fields": {
+  "row": 6,
+  "tier": 4,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 30,
+ "fields": {
+  "row": 6,
+  "tier": 5,
+  "style": "na",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 31,
+ "fields": {
+  "row": 7,
+  "tier": 1,
+  "style": "bold",
+  "text": "10",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 32,
+ "fields": {
+  "row": 7,
+  "tier": 2,
+  "style": "bold",
+  "text": "7",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 33,
+ "fields": {
+  "row": 7,
+  "tier": 3,
+  "style": "bold",
+  "text": "5",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 34,
+ "fields": {
+  "row": 7,
+  "tier": 4,
+  "style": "bold",
+  "text": "3",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 35,
+ "fields": {
+  "row": 7,
+  "tier": 5,
+  "style": "bold",
+  "text": "1",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 36,
+ "fields": {
+  "row": 8,
+  "tier": 1,
+  "style": "yes",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 37,
+ "fields": {
+  "row": 8,
+  "tier": 2,
+  "style": "yes",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 38,
+ "fields": {
+  "row": 8,
+  "tier": 3,
+  "style": "dash",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 39,
+ "fields": {
+  "row": 8,
+  "tier": 4,
+  "style": "dash",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.matrixcell",
+ "pk": 40,
+ "fields": {
+  "row": 8,
+  "tier": 5,
+  "style": "dash",
+  "text": "",
+  "subtext": ""
+ }
+},
+{
+ "model": "core.expositionsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "exposition",
+  "pill_text": "GLOBAL MOBILITY EXPO • YASHOBHOOMI ARENA",
+  "heading": "Exposition & Commercial Spaces",
+  "subtext": "Prime turnkey and raw space footprints for automotive OEMs, Tier-1 suppliers, engineering tech, and mobility startups.",
+  "show_top_button": true,
+  "top_button_text": "Reserve Expo Booth",
+  "top_button_link": "#contact",
+  "venue_image": "exposition/Exhibition_Hall.png",
+  "venue_tag": "LIVE VENUE VIEW",
+  "venue_title": "Yashobhoomi World-Class Exhibition Arenas & Pavilion Booths",
+  "venue_subtext": "India's International Convention and Expo Centre (IICC), Dwarka, New Delhi",
+  "show_pass_box": true,
+  "pass_title": "Exhibitor Pass Entitlements",
+  "pass_tag": "Official Inclusions",
+  "pass_count": "2×",
+  "pass_headline": "2 Complimentary Exhibitor Passes",
+  "pass_subline": "Allocated per confirmed booth booking",
+  "pass_includes": "Exhibition Arena access and lunch for 2 days.",
+  "pass_excludes": "Delegate Kit, Gala Dinner, and access to Plenary & Technical Session.",
+  "gst_footnote": "* 18% GST extra is applicable",
+  "footer_link_text": "Enquire for Custom Pavilion →",
+  "footer_link_url": "#contact"
+ }
+},
+{
+ "model": "core.boothspace",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "grid_view",
+  "size_label": "9 sq. mtr.",
+  "grid_label": "(3 × 3)",
+  "space_type": "RAW SPACE",
+  "dimensions": "3m × 3m",
+  "category": "STARTUP & SPECIALIST",
+  "name": "Standard Turnkey",
+  "price_label": "VALUE IN INR *",
+  "currency_symbol": "₹",
+  "price": "1,50,000",
+  "gst_note": "*18% GST applicable extra",
+  "button_text": "BOOK SPACE",
+  "button_link": "#contact",
+  "button_style": "outline",
+  "tint_color": "#f0fdfa",
+  "accent_color": "#0d9488",
+  "flagship_tag": "",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.boothspace",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "grid_view",
+  "size_label": "12 sq. mtr.",
+  "grid_label": "(3 × 4)",
+  "space_type": "RAW SPACE",
+  "dimensions": "3m × 4m",
+  "category": "TECHNOLOGY SHOWCASE",
+  "name": "Executive Space",
+  "price_label": "VALUE IN INR *",
+  "currency_symbol": "₹",
+  "price": "2,00,000",
+  "gst_note": "*18% GST applicable extra",
+  "button_text": "BOOK SPACE",
+  "button_link": "#contact",
+  "button_style": "dark",
+  "tint_color": "#f0f9ff",
+  "accent_color": "#0284c7",
+  "flagship_tag": "",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.boothspace",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "storefront",
+  "size_label": "18 sq. mtr.",
+  "grid_label": "(3 × 6)",
+  "space_type": "RAW SPACE",
+  "dimensions": "3m × 6m",
+  "category": "OEM SUB-SYSTEM",
+  "name": "Pavilion Bay",
+  "price_label": "VALUE IN INR *",
+  "currency_symbol": "₹",
+  "price": "3,00,000",
+  "gst_note": "*18% GST applicable extra",
+  "button_text": "BOOK SPACE",
+  "button_link": "#contact",
+  "button_style": "outline",
+  "tint_color": "#ecfdf5",
+  "accent_color": "#10b981",
+  "flagship_tag": "",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.boothspace",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "icon": "apartment",
+  "size_label": "36 sq. mtr.",
+  "grid_label": "(6 × 6)",
+  "space_type": "RAW SPACE",
+  "dimensions": "6m × 6m",
+  "category": "FLAGSHIP SHOWCASE",
+  "name": "Island Pavilion",
+  "price_label": "VALUE IN INR *",
+  "currency_symbol": "₹",
+  "price": "6,00,000",
+  "gst_note": "*18% GST applicable extra",
+  "button_text": "BOOK SPACE",
+  "button_link": "#contact",
+  "button_style": "accent",
+  "tint_color": "#fff7d7",
+  "accent_color": "#d97706",
+  "flagship_tag": "FLAGSHIP OPTION",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.specialsponsorsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "special-sponsorships",
+  "pill_text": "TARGETED BRAND EXPERIENCES",
+  "heading": "Special Event Sponsorships",
+  "subtext": "Curated high-touch hospitality and experiential networking properties designed to position your leadership before key mobility stakeholders and global delegations.",
+  "show_tag": true,
+  "tag_text": "Exclusive Hospitality Slots"
+ }
+},
+{
+ "model": "core.specialsponsorcard",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "strip_text": "NETWORKING BREAKS",
+  "strip_color": "#0D9488",
+  "exclusive_tag": "",
+  "slot_tag": "Slot Available",
+  "is_highlighted": false,
+  "name": "Hi-Tea Sponsor",
+  "description": "Networking Refreshment & Mid-Session Intermission Partner",
+  "price_label": "INVESTMENT",
+  "currency_symbol": "₹",
+  "price": "3,00,000",
+  "price_note_prefix": "INR",
+  "deliverables_label": "DELIVERABLES & ENTITLEMENTS",
+  "deliverables": "Logo in Event Backdrop & other marketing collaterals",
+  "passes_label": "Complimentary Passes:",
+  "passes_value": "1 Delegate",
+  "button_text": "EXPRESS INTEREST",
+  "button_link": "#contact",
+  "button_style": "outline",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.specialsponsorcard",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "strip_text": "EXECUTIVE DINING",
+  "strip_color": "#2563EB",
+  "exclusive_tag": "",
+  "slot_tag": "Slot Available",
+  "is_highlighted": false,
+  "name": "Lunch Sponsor",
+  "description": "High-Profile Executive Dining & Keynote Luncheon Partner",
+  "price_label": "INVESTMENT",
+  "currency_symbol": "₹",
+  "price": "10,00,000",
+  "price_note_prefix": "INR",
+  "deliverables_label": "DELIVERABLES & ENTITLEMENTS",
+  "deliverables": "Logo in Event Backdrop & other marketing collaterals",
+  "passes_label": "Complimentary Passes:",
+  "passes_value": "5 Delegates",
+  "button_text": "EXPRESS INTEREST",
+  "button_link": "#contact",
+  "button_style": "dark",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.specialsponsorcard",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "strip_text": "EVENING GALA - PRIME",
+  "strip_color": "#D97706",
+  "exclusive_tag": "EXCLUSIVE",
+  "slot_tag": "Slot Available",
+  "is_highlighted": true,
+  "name": "Dinner Sponsor",
+  "description": "Gala Networking Banquet & Presidential Evening Host",
+  "price_label": "INVESTMENT",
+  "currency_symbol": "₹",
+  "price": "18,00,000",
+  "price_note_prefix": "INR",
+  "deliverables_label": "DELIVERABLES & ENTITLEMENTS",
+  "deliverables": "Logo in Event Backdrop & other marketing collaterals",
+  "passes_label": "Complimentary Passes:",
+  "passes_value": "7 Delegates",
+  "button_text": "RESERVE DINNER GALA",
+  "button_link": "#contact",
+  "button_style": "accent",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.specialsponsorcard",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "strip_text": "EVENING FEATURE",
+  "strip_color": "#059669",
+  "exclusive_tag": "",
+  "slot_tag": "Slot Available",
+  "is_highlighted": false,
+  "name": "Cultural Program",
+  "description": "Grand Cultural Night & Delegates Heritage Evening Partner",
+  "price_label": "INVESTMENT",
+  "currency_symbol": "₹",
+  "price": "8,00,000",
+  "price_note_prefix": "INR",
+  "deliverables_label": "DELIVERABLES & ENTITLEMENTS",
+  "deliverables": "Logo in Event Backdrop & other marketing collaterals",
+  "passes_label": "Complimentary Passes:",
+  "passes_value": "4 Delegates",
+  "button_text": "EXPRESS INTEREST",
+  "button_link": "#contact",
+  "button_style": "outline",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.meetingroomsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "meeting-room",
+  "pill_text": "B2B CONFIDENTIAL SPACE",
+  "title": "Business Meeting Room",
+  "currency_label": "INR",
+  "price": "5,000",
+  "price_unit": "/ hour",
+  "gst_note": "* 18% GST extra is applicable",
+  "button_text": "Book Meeting Room →",
+  "button_link": "#contact"
+ }
+},
+{
+ "model": "core.meetingroomdetail",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "sell",
+  "label": "Booking Fee:",
+  "text": "INR 5,000 per hour (+18% GST extra).",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.meetingroomdetail",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "schedule",
+  "label": "Duration:",
+  "text": "Minimum 2 hours per booking is mandatory.",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.meetingroomdetail",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "event_available",
+  "label": "Availability:",
+  "text": "Limited slots (first-come, first-served basis).",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.meetingroomfeature",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "groups",
+  "title": "Professional Environment",
+  "description": "Dedicated space for high-level discussions and strategic collaborations.",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.meetingroomfeature",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "shield",
+  "title": "Privacy & Focus",
+  "description": "Ideal for confidential meetings, sponsor interactions, and commercial negotiations.",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.meetingroomfeature",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "location_on",
+  "title": "Convenience",
+  "description": "Located within Yashobhoomi conference arena for seamless access during sessions.",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.meetingroomfeature",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "icon": "redeem",
+  "title": "Essential Provisions",
+  "description": "Complimentary notepads, executive pens, and water bottles per booking.",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.techhivesection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "techhive",
+  "pill_text": "TECHHIVE & DELEGATE REGISTRATION",
+  "heading": "Startup Incubator & Attendance Packages",
+  "subtext": "Fostering mobility startups alongside global automotive engineering academia, researchers, and industry delegates.",
+  "show_top_button": true,
+  "top_button_text": "Register as Delegate",
+  "top_button_link": "#contact",
+  "show_panel": true,
+  "panel_tag1": "MOBILITY STARTUP LAUNCHPAD",
+  "panel_tag2": "DEEP-TECH HUB",
+  "panel_title": "TechHive / Startup",
+  "panel_description": "Dedicated platform for emerging innovators, hardware inventors, and mobility tech entrepreneurs.",
+  "fee_label": "REGISTRATION FEE",
+  "fee_tag": "All Inclusives",
+  "fee_currency": "INR",
+  "fee_price": "50,000",
+  "fee_unit": "/ registration",
+  "fee_gst_note": "18% GST extra is applicable",
+  "deliverables_label": "STARTUP DELIVERABLES & ENTITLEMENTS",
+  "apply_button_text": "APPLY FOR TECHHIVE STARTUP SPACE →",
+  "apply_button_link": "#contact",
+  "show_delegate_matrix": true,
+  "matrix_title": "DELEGATE INVESTMENT MATRIX",
+  "matrix_subtitle": "International & National Attendance Rates.",
+  "matrix_badge": "Early Bird Active till Sep 15, 2026",
+  "category_column_title": "Category",
+  "category_column_note": "(All Nations)",
+  "early_column_title": "Till Sep 15, 2026",
+  "early_column_note": "EARLY BIRD",
+  "standard_column_title": "After Sep 15, 2026",
+  "standard_column_note": "Standard Tariff",
+  "matrix_gst_note": "18% GST extra is applicable on all delegate categories.",
+  "matrix_button_text": "REGISTER AS DELEGATE →",
+  "matrix_button_link": "#contact"
+ }
+},
+{
+ "model": "core.techhivedeliverable",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "person",
+  "title": "1 Complimentary Delegate Pass",
+  "subline": "Full delegate access per confirmed registration",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.techhivedeliverable",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "inventory_2",
+  "title": "2×2 = 4 sq. mtr. Expo Space",
+  "subline": "Turnkey / Raw Space footprint within Innovation Pavilion",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.techhivedeliverable",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "co_present",
+  "title": "1 TechHive Presentation",
+  "subline": "Dedicated showcase stage slot to pitch before mobility leaders",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.delegaterate",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "category": "SAEINDIA Member",
+  "description": "",
+  "note": "Save ₹2,500 with membership",
+  "early_price": "₹15,000",
+  "standard_price": "₹17,500",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.delegaterate",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "category": "SAEINDIA Non-Member",
+  "description": "Global Industry professionals & non-affiliates",
+  "note": "",
+  "early_price": "₹18,000",
+  "standard_price": "₹20,000",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.delegaterate",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "category": "Academia Faculty",
+  "description": "Recognized universities, colleges & research institutions",
+  "note": "",
+  "early_price": "₹10,000",
+  "standard_price": "₹12,000",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.delegaterate",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "category": "Author",
+  "description": "Accepted paper presenting authors",
+  "note": "",
+  "early_price": "₹8,000",
+  "standard_price": "₹8,000",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.gallerysection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "gallery",
+  "pill_text": "CONFERENCE HIGHLIGHTS",
+  "heading": "Event Gallery",
+  "subtext": "High-resolution captures and key moments from the APAC Mobility Summit."
+ }
+},
+{
+ "model": "core.galleryimage",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "image": "gallery/Exhibition_Hall.png",
+  "caption": "EV exhibition floor with visitors",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.galleryimage",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "image": "gallery/Keynote_speaker_presentation.png",
+  "caption": "Keynote on the future of mobility",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.galleryimage",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "image": "gallery/OverlayShadow.png",
+  "caption": "Panel on electrification and autonomous driving",
+  "order": 3,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.galleryimage",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "image": "gallery/OverlayShadow_1.png",
+  "caption": "Delegates networking at the reception",
+  "order": 4,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.partnerssection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "partners",
+  "pill_text": "Our Sponsors & Partners",
+  "heading": "Supporting Innovation Together",
+  "autoplay": true,
+  "speed_seconds": 30,
+  "show_arrows": true
+ }
+},
+{
+ "model": "core.partnerlogo",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "name": "Bosch",
+  "logo": "partners/bosch.png",
+  "website": "",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.partnerlogo",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "name": "Continental",
+  "logo": "partners/Container.png",
+  "website": "",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.partnerlogo",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "name": "ZF",
+  "logo": "partners/zf-logo.png",
+  "website": "",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.partnerlogo",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "name": "Denso",
+  "logo": "partners/denso-logo.png",
+  "website": "",
+  "order": 4,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.partnerlogo",
+ "pk": 5,
+ "fields": {
+  "section": 1,
+  "name": "Magna",
+  "logo": "partners/magna-logo.png",
+  "website": "",
+  "order": 5,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.partnerlogo",
+ "pk": 6,
+ "fields": {
+  "section": 1,
+  "name": "Valeo",
+  "logo": "partners/valeo-logo.png",
+  "website": "",
+  "order": 6,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.bannersection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "register",
+  "background_image": "banner/Neon_Velocity__Futuristic_City_Drive.png",
+  "pill_text": "23RD EDITION - APAC GLOBAL GATEWAY",
+  "heading_line1": "Where Industry Meets Opportunity.",
+  "heading_line2": "Join Hands Now!",
+  "description": "Engage directly with 2,000+ delegates, key government policymakers, leading mobility OEMs, and pioneering researchers shaping the next era of transportation.",
+  "button_text": "REGISTER NOW →",
+  "button_link": "#contact"
+ }
+},
+{
+ "model": "core.banneritem",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "verified",
+  "text": "Secure Your Pass",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.banneritem",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "location_on",
+  "text": "Yashobhoomi, New Delhi",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.banneritem",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "calendar_month",
+  "text": "Nov 13–14, 2026",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.bannerinfo",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "icon": "hub",
+  "label": "BIENNIAL MOBILITY FORUM",
+  "value": "11 APAC Nations Represented",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.bannerinfo",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "icon": "location_on",
+  "label": "CONFERENCE VENUE",
+  "value": "Yashobhoomi (IICC), Dwarka",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.bannerinfo",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "icon": "apartment",
+  "label": "ORGANIZED UNDER",
+  "value": "SAEINDIA, FISITA & SAE Intl",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.contactsection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "contact",
+  "eyebrow": "DIRECT ASSISTANCE",
+  "heading": "Executive Organizer & Secretariat Contact Hub",
+  "side_text": "Get in touch for delegate, sponsorship, or booth queries.",
+  "show_qr": true,
+  "qr_pill_text": "INSTANT MOBILE ACCESS",
+  "qr_title": "Scan to Know More",
+  "qr_subtext": "Instant access to program, brochure & tickets",
+  "qr_image": "",
+  "qr_background_image": "contact/car3_M50ucsg.png",
+  "qr_caption": "CAMERA OR QR APP",
+  "show_strip": true,
+  "strip_label": "Official Conference Digital Headquarters:",
+  "strip_link_text": "www.saeindia.org/apac23",
+  "strip_link_url": "https://www.saeindia.org/apac23"
+ }
+},
+{
+ "model": "core.contactperson",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "tag": "SECRETARIAT",
+  "name": "Mr. Ajay Nair",
+  "role": "Conference Secretariat",
+  "phones": "+91 93846 97969",
+  "emails": "ajay@saeindia.org",
+  "order": 1,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.contactperson",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "tag": "COORDINATION",
+  "name": "Ms. Ayisha",
+  "role": "Delegate & Sponsorship Coordination",
+  "phones": "+91 73977 60949",
+  "emails": "ayisha@saeindia.org",
+  "order": 2,
+  "is_active": true,
+  "is_featured": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.coordinatorssection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "menu_anchor": "coordinators",
+  "eyebrow": "BROCHURE OFFICIAL DIRECTORY",
+  "heading": "Sponsorship & Event Desk Coordinators",
+  "side_text": "Direct contact points for sponsors, exhibitors, delegates & startups",
+  "desk_background_image": "coordinators/car5.png"
+ }
+},
+{
+ "model": "core.coordinator",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "name": "Mr. U. D. Bhangale",
+  "phones": "+91 98102 71130",
+  "emails": "ed.udbhangale@saenis.org",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.coordinator",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "name": "Mr. Praveensingh Jadhav",
+  "phones": "+91 97115 14560",
+  "emails": "pravins.jadhav@maruti.co.in",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.coordinator",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "name": "Mr. Jayawant Hardikar",
+  "phones": "+91 99023 81670",
+  "emails": "APAC_sponsorship@saeindia.org",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.coordinator",
+ "pk": 4,
+ "fields": {
+  "section": 1,
+  "name": "Mr. Ajay Nair",
+  "phones": "+91 93846 97969",
+  "emails": "ajay@saeindia.org",
+  "order": 4,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.coordinator",
+ "pk": 5,
+ "fields": {
+  "section": 1,
+  "name": "Ms. Avigha",
+  "phones": "",
+  "emails": "avigha@saeindia.org",
+  "order": 5,
+  "is_active": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.deskcard",
+ "pk": 1,
+ "fields": {
+  "section": 1,
+  "tag": "EXPOSITION DESK",
+  "name": "Mr. Ilangovan",
+  "phones": "+91 88704 71511",
+  "emails": "ilangois@saeindia.org",
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.deskcard",
+ "pk": 2,
+ "fields": {
+  "section": 1,
+  "tag": "DELEGATE DESK",
+  "name": "Ms. Shantha Priya",
+  "phones": "+91 73387 48891",
+  "emails": "priya@saeindia.org",
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.deskcard",
+ "pk": 3,
+ "fields": {
+  "section": 1,
+  "tag": "TECHHIVE DESK",
+  "name": "Mr. Suman",
+  "phones": "+91 98402 10293",
+  "emails": "suman@saeindia.org",
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footersection",
+ "pk": 1,
+ "fields": {
+  "is_active": true,
+  "tagline": "Asia Pacific Automotive Engineering Conference • Sustainable Mobility & Technology",
+  "show_website_pill": true,
+  "website_text": "saeindia.org/apac23",
+  "website_url": "https://www.saeindia.org/apac23",
+  "copyright_text": "© 2026 Asia Pacific Automotive Engineering Conference (APAC 23) / SAEINDIA. All rights reserved."
+ }
+},
+{
+ "model": "core.footersocial",
+ "pk": 1,
+ "fields": {
+  "footer": 1,
+  "platform": "facebook",
+  "url": "",
+  "order": 1,
+  "is_active": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footersocial",
+ "pk": 2,
+ "fields": {
+  "footer": 1,
+  "platform": "linkedin",
+  "url": "",
+  "order": 2,
+  "is_active": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footersocial",
+ "pk": 3,
+ "fields": {
+  "footer": 1,
+  "platform": "instagram",
+  "url": "",
+  "order": 3,
+  "is_active": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footersocial",
+ "pk": 4,
+ "fields": {
+  "footer": 1,
+  "platform": "x",
+  "url": "",
+  "order": 4,
+  "is_active": false,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlink",
+ "pk": 1,
+ "fields": {
+  "footer": 1,
+  "label": "Home",
+  "link": "#home",
+  "is_highlighted": false,
+  "open_in_new_tab": false,
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlink",
+ "pk": 2,
+ "fields": {
+  "footer": 1,
+  "label": "About",
+  "link": "#about",
+  "is_highlighted": false,
+  "open_in_new_tab": false,
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlink",
+ "pk": 3,
+ "fields": {
+  "footer": 1,
+  "label": "Tracks",
+  "link": "#topics",
+  "is_highlighted": false,
+  "open_in_new_tab": false,
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlink",
+ "pk": 4,
+ "fields": {
+  "footer": 1,
+  "label": "Speakers",
+  "link": "#committee",
+  "is_highlighted": false,
+  "open_in_new_tab": false,
+  "order": 4,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlink",
+ "pk": 5,
+ "fields": {
+  "footer": 1,
+  "label": "Sponsors",
+  "link": "#partners",
+  "is_highlighted": false,
+  "open_in_new_tab": false,
+  "order": 5,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlink",
+ "pk": 6,
+ "fields": {
+  "footer": 1,
+  "label": "Register",
+  "link": "#contact",
+  "is_highlighted": true,
+  "open_in_new_tab": false,
+  "order": 6,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlink",
+ "pk": 7,
+ "fields": {
+  "footer": 1,
+  "label": "Contact",
+  "link": "#contact",
+  "is_highlighted": false,
+  "open_in_new_tab": false,
+  "order": 7,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlegallink",
+ "pk": 1,
+ "fields": {
+  "footer": 1,
+  "label": "Privacy Policy",
+  "link": "",
+  "open_in_new_tab": false,
+  "order": 1,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlegallink",
+ "pk": 2,
+ "fields": {
+  "footer": 1,
+  "label": "Terms & Conditions",
+  "link": "",
+  "open_in_new_tab": false,
+  "order": 2,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.footerlegallink",
+ "pk": 3,
+ "fields": {
+  "footer": 1,
+  "label": "Contact",
+  "link": "#contact",
+  "open_in_new_tab": false,
+  "order": 3,
+  "is_active": true,
+  "is_delete": false
+ }
+},
+{
+ "model": "core.credits",
+ "pk": 1,
+ "fields": {
+  "text": "Designed & Developed by Vetri IT Systems",
+  "url": "https://vetriitsystems.com/",
+  "open_in_new_tab": true,
+  "is_active": true
+ }
+},
+{
+ "model": "core.seosettings",
+ "pk": 1,
+ "fields": {
+  "meta_title": "Auto Performance Automotive Engineering Conference | SAEINDIA",
+  "meta_description": "Join APAC 23, the Asia Pacific Automotive Engineering Conference, Nov 13-14, 2026 at Yashobhoomi, New Delhi. Explore mobility innovation, exhibit, sponsor and network.",
+  "meta_keywords": "APAC 23, automotive engineering conference, SAEINDIA, mobility, New Delhi",
+  "og_image": ""
+ }
+},
+{
+ "model": "core.emailsettings",
+ "pk": 1,
+ "fields": {
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 587,
+  "use_tls": true,
+  "use_ssl": false,
+  "smtp_username": "",
+  "smtp_password": "",
+  "sender_name": "SAE India",
+  "from_email": "",
+  "notification_emails": "",
+  "subject_prefix": "[SAE India] ",
+  "is_active": true
+ }
+}
+]
