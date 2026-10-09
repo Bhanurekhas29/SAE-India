@@ -10,7 +10,18 @@
       {% endfor %}
     </nav>
     {% if header.show_button and header.button_text %}
-    <a class="btn btn-orange header-cta" href="{{ header.button_link }}"{% if header.button_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ header.button_text }}</a>
+    {% if header.button_options_live %}
+    <div class="header-cta-wrap" data-dropdown>
+      <button class="btn btn-orange header-cta" type="button" aria-haspopup="true" aria-expanded="false" data-dd-toggle>{{ header.button_text }}<span class="material-symbols-outlined">expand_more</span></button>
+      <ul class="dd-menu" role="menu">
+        {% for o in header.button_options_live %}
+        <li role="none"><a role="menuitem" href="{{ o.link }}"{% if o.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ o.label }}{% if o.open_in_new_tab %}<span class="material-symbols-outlined">arrow_outward</span>{% endif %}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% else %}
+    <div class="header-cta-wrap"><a class="btn btn-orange header-cta" href="{{ header.button_link }}"{% if header.button_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ header.button_text }}</a></div>
+    {% endif %}
     {% endif %}
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
       <span class="material-symbols-outlined">menu</span>

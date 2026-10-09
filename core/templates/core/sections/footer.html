@@ -9,7 +9,7 @@
       </div>
       <div class="foot-social">
         {% for s in footer.socials_live %}
-        <a class="soc" href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.get_platform_display }}">{% include "core/sections/_social_icon.html" with platform=s.platform %}</a>
+        <a class="soc" data-platform="{{ s.platform }}" href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.get_platform_display }}">{% include "core/sections/_social_icon.html" with platform=s.platform %}</a>
         {% endfor %}
         {% if footer.socials_live and footer.show_website_pill and footer.website_text %}<span class="foot-sep"></span>{% endif %}
         {% if footer.show_website_pill and footer.website_text %}<a class="web-pill" href="{{ footer.website_url }}" target="_blank" rel="noopener"><span class="material-symbols-outlined">language</span>{{ footer.website_text }}</a>{% endif %}
@@ -17,7 +17,7 @@
     </div>
     {% if footer.links_live %}
     <nav class="foot-nav" aria-label="Footer menu">
-      {% for l in footer.links_live %}<a href="{{ l.link }}"{% if l.is_highlighted %} class="is-hl"{% endif %}{% if l.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% endfor %}
+      {% for l in footer.links_live %}{% if l.use_register_dropdown and header and header.button_options_live %}{% include "core/sections/_register_dd.html" with classes="foot-reg is-hl" label=l.label fallback=l.link %}{% else %}<a href="{{ l.link }}"{% if l.is_highlighted %} class="is-hl"{% endif %}{% if l.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>{% endif %}{% endfor %}
     </nav>
     {% endif %}
     <div class="foot-bottom">

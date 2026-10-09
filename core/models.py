@@ -1047,6 +1047,23 @@ class ContactSection(SingletonModel):
         return 'Contact Section'
 
 
+class ContactQR(models.Model):
+    section = models.ForeignKey(ContactSection, on_delete=models.CASCADE, related_name='qr_codes')
+    label = models.CharField(max_length=60, help_text='Shown under the code, e.g. Author registration')
+    image = models.ImageField(upload_to='contact/')
+    link = models.URLField(blank=True, help_text='Optional: opens in a new tab when the QR code is clicked or tapped.')
+    order = models.PositiveIntegerField(default=0, help_text='Lower numbers appear first.')
+    is_active = models.BooleanField(default=True)
+    is_delete = models.BooleanField('Deleted', default=False, help_text='Soft delete: hidden on the site.')
+
+    class Meta:
+        verbose_name = 'QR code'
+        ordering = ['order', 'id']
+
+    def __str__(self):
+        return self.label
+
+
 class ContactPerson(models.Model):
     section = models.ForeignKey(ContactSection, on_delete=models.CASCADE, related_name='people')
     tag = models.CharField(max_length=40, blank=True, help_text='e.g. SECRETARIAT')
@@ -1196,6 +1213,9 @@ class FooterLink(models.Model):
     link = models.CharField(max_length=200, help_text='Section anchor like #about, or a full URL.')
     is_highlighted = models.BooleanField('Highlight (accent colour)', default=False)
     open_in_new_tab = models.BooleanField(default=False)
+    use_register_dropdown = models.BooleanField(
+        'Open the Register Now choices', default=False,
+        help_text='Tick to show the Author / Delegate choices (set in Header & Menu) instead of the link above.')
     order = models.PositiveIntegerField(default=0, help_text='Lower numbers appear first.')
     is_active = models.BooleanField(default=True)
     is_delete = models.BooleanField('Deleted', default=False, help_text='Soft delete: hidden on the site.')
@@ -1239,6 +1259,113 @@ class Credits(SingletonModel):
 
     def __str__(self):
         return 'Credits'
+
+
+class FloatingButtons(SingletonModel):
+    is_active = models.BooleanField(
+        'Show floating buttons', default=True,
+        help_text='Untick to remove both floating buttons from the website.')
+    show_whatsapp = models.BooleanField('Show WhatsApp button', default=True)
+    whatsapp_number = models.CharField(
+        max_length=30, default='+91 8870471511',
+        help_text='With country code, e.g. +91 8870471511')
+    whatsapp_message = models.CharField(
+        max_length=250, blank=True, default='Hello! I would like to know more about APAC 23.',
+        help_text='Text already typed in when the chat opens. Leave empty for none.')
+    show_call = models.BooleanField('Show Call button', default=True)
+    call_number = models.CharField(
+        max_length=30, default='+91 8870471511',
+        help_text='With country code, e.g. +91 8870471511')
+
+    class Meta:
+        verbose_name = 'Floating Buttons'
+        verbose_name_plural = 'Floating Buttons'
+
+    def __str__(self):
+        return 'Floating Buttons'
+
+    @property
+    def whatsapp_digits(self):
+        return ''.join(c for c in self.whatsapp_number if c.isdigit())
+
+    @property
+    def call_tel(self):
+        return ''.join(c for c in self.call_number if c.isdigit() or c == '+')
+
+
+class HeaderButtonOption(models.Model):
+    header = models.ForeignKey(HeaderSettings, on_delete=models.CASCADE, related_name='button_options')
+    label = models.CharField(max_length=60, help_text='e.g. Register as Author')
+    link = models.CharField(max_length=300, help_text='Full web address or a section anchor like #contact.')
+    open_in_new_tab = models.BooleanField(default=True)
+    order = models.PositiveIntegerField(default=0, help_text='Lower numbers appear first.')
+    is_active = models.BooleanField(default=True)
+    is_delete = models.BooleanField('Deleted', default=False, help_text='Soft delete: hidden on the site.')
+
+    class Meta:
+        verbose_name = 'Header button choice'
+        ordering = ['order', 'id']
+
+    def __str__(self):
+        return self.label
+
+
+class LegalPage(models.Model):
+    slug = models.SlugField(
+        max_length=40, unique=True,
+        help_text='Short name used in the link, e.g. "terms". The popup opens from a link to #legal-terms.')
+    title = models.CharField(max_length=120)
+    subtitle = models.TextField(
+        blank=True, help_text='Lines shown under the title (one per line), e.g. the event name and dates.')
+    content = models.TextField(
+        help_text='Type the text. Start a heading line with ## (for example: ## 1. Registration). '
+                  'Start a bullet line with a dash and a space (- like this). Leave a blank line between paragraphs.')
+    order = models.PositiveIntegerField(default=0, help_text='Lower numbers appear first.')
+    is_active = models.BooleanField('Show this page', default=True)
+    is_delete = models.BooleanField('Deleted', default=False, help_text='Soft delete: hidden on the site.')
+
+    class Meta:
+        verbose_name = 'Legal Page'
+        verbose_name_plural = 'Legal Pages (popups)'
+        ordering = ['order', 'id']
+
+    def __str__(self):
+        return self.title
+
+    @property
+    def subtitle_lines(self):
+        return [line.strip() for line in self.subtitle.splitlines() if line.strip()]
+
+    @property
+    def blocks(self):
+        """The text as a list of (kind, value) blocks: 'h' heading, 'p' paragraph, 'ul' bullet list."""
+        out = []
+        for chunk in self.content.replace('\r\n', '\n').split('\n\n'):
+            lines = [l.strip() for l in chunk.split('\n') if l.strip()]
+            para, bullets = [], []
+
+            def flush():
+                if para:
+                    out.append(('p', ' '.join(para)))
+                    para.clear()
+                if bullets:
+                    out.append(('ul', list(bullets)))
+                    bullets.clear()
+
+            for l in lines:
+                if l.startswith('## '):
+                    flush()
+                    out.append(('h', l[3:].strip()))
+                elif l.startswith('- ') or l.startswith('\u2022'):
+                    if para:
+                        flush()
+                    bullets.append(l.lstrip('-\u2022').strip())
+                else:
+                    if bullets:
+                        flush()
+                    para.append(l)
+            flush()
+        return out
 
 
 class SEOSettings(SingletonModel):

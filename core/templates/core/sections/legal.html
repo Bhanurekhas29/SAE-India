@@ -1,0 +1,19 @@
+{% for p in legal_pages %}
+<div class="modal" id="legal-{{ p.slug }}" role="dialog" aria-modal="true" aria-labelledby="legal-{{ p.slug }}-title" hidden>
+  <div class="modal-box">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><span class="material-symbols-outlined">close</span></button>
+    <header class="modal-head">
+      <h2 id="legal-{{ p.slug }}-title">{{ p.title }}</h2>
+      {% for line in p.subtitle_lines %}<p class="modal-sub">{{ line }}</p>{% endfor %}
+    </header>
+    <div class="modal-body">
+      {% for kind, value in p.blocks %}
+        {% if kind == 'h' %}<h3>{{ value }}</h3>
+        {% elif kind == 'ul' %}<ul>{% for li in value %}<li>{{ li }}</li>{% endfor %}</ul>
+        {% else %}<p>{{ value }}</p>{% endif %}
+      {% endfor %}
+    </div>
+    <footer class="modal-foot"><button class="btn btn-dark btn-sm" type="button" data-modal-close>Close</button></footer>
+  </div>
+</div>
+{% endfor %}

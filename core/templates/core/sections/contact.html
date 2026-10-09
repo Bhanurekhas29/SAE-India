@@ -26,7 +26,19 @@
           {% if contact.qr_pill_text %}<span class="pill pill-orange-solid"><i class="dot"></i>{{ contact.qr_pill_text }}</span>{% endif %}
           <h3>{{ contact.qr_title }}</h3>
           <p>{{ contact.qr_subtext }}</p>
+          {% if contact.qr_codes_live %}
+          <div class="qr-row">
+            {% for q in contact.qr_codes_live %}
+            <figure class="qr-item">
+              {% if q.link %}<a class="qr-box" href="{{ q.link }}" target="_blank" rel="noopener" aria-label="{{ q.label }}"><img src="{{ q.image.url }}" alt="QR code: {{ q.label }}"></a>
+              {% else %}<div class="qr-box"><img src="{{ q.image.url }}" alt="QR code: {{ q.label }}"></div>{% endif %}
+              <figcaption>{{ q.label }}</figcaption>
+            </figure>
+            {% endfor %}
+          </div>
+          {% else %}
           <div class="qr-box">{% if contact.qr_image %}<img src="{{ contact.qr_image.url }}" alt="QR code">{% else %}<span class="material-symbols-outlined">qr_code_2</span>{% endif %}</div>
+          {% endif %}
           {% if contact.qr_caption %}<small><span class="material-symbols-outlined">photo_camera</span>{{ contact.qr_caption }}</small>{% endif %}
         </aside>
         {% endif %}

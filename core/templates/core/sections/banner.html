@@ -6,7 +6,7 @@
         {% if banner.pill_text %}<span class="pill pill-dark"><i class="dot dot-gold"></i>{{ banner.pill_text }}</span>{% endif %}
         <h2><span class="bn-italic">{{ banner.heading_line1 }}</span><span class="bn-green">{{ banner.heading_line2 }}</span></h2>
         <p>{{ banner.description }}</p>
-        {% if banner.button_text %}<a class="btn btn-orange" href="{{ banner.button_link }}">{{ banner.button_text }}</a>{% endif %}
+        {% if banner.button_text %}{% include "core/sections/_register_dd.html" with classes="btn btn-orange" label=banner.button_text fallback=banner.button_link %}{% endif %}
         <ul class="banner-items">{% for i in banner.items_live %}<li><span class="material-symbols-outlined">{{ i.icon }}</span>{{ i.text }}</li>{% endfor %}</ul>
       </div>
     </div>

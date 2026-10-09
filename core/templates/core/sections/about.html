@@ -25,7 +25,7 @@
         {% endfor %}
       </div>
       {% endif %}
-      {% if about.show_button and about.button_text %}<a class="btn btn-orange btn-grad" href="{{ about.button_link }}">{{ about.button_text }}</a>{% endif %}
+      {% if about.show_button and about.button_text %}{% include "core/sections/_register_dd.html" with classes="btn btn-orange btn-grad" label=about.button_text fallback=about.button_link %}{% endif %}
     </div>
   </div>
 </section>

@@ -75,7 +75,7 @@ def build_matrix(section):
 
 
 def index(request):
-    header = with_items(solo(m.HeaderSettings), 'menu_items')
+    header = with_items(solo(m.HeaderSettings), 'menu_items', 'button_options')
     seo = m.SEOSettings.objects.filter(pk=1).first()
     credits = solo(m.Credits)
 
@@ -83,7 +83,7 @@ def index(request):
     if footer is not None:
         footer.socials_live = [s for s in footer.socials_live if s.url]
 
-    contact = with_items(solo(m.ContactSection), 'people')
+    contact = with_items(solo(m.ContactSection), 'people', 'qr_codes')
 
     site_name = header.site_name if header else 'SAE India'
     page_title = (seo.meta_title if seo and seo.meta_title else site_name)
@@ -116,5 +116,7 @@ def index(request):
         'coordinators': with_items(solo(m.CoordinatorsSection), 'coordinators', 'desks'),
         'footer': footer,
         'credits': credits,
+        'floating': solo(m.FloatingButtons),
+        'legal_pages': list(live(m.LegalPage.objects.all())),
     }
     return render(request, 'core/index.html', context)

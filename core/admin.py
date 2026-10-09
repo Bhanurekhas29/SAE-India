@@ -37,10 +37,17 @@ class MenuItemInline(admin.TabularInline):
     fields = ('label', 'link', 'open_in_new_tab', 'order', 'is_active', 'is_delete')
 
 
+class HeaderButtonOptionInline(admin.TabularInline):
+    model = m.HeaderButtonOption
+    extra = 1
+    verbose_name_plural = 'Register Now choices (dropdown)'
+    fields = ('label', 'link', 'open_in_new_tab', 'order', 'is_active', 'is_delete')
+
+
 @admin.register(m.HeaderSettings)
 class HeaderSettingsAdmin(SingletonAdmin):
     show_in_website_group = True
-    inlines = [MenuItemInline]
+    inlines = [MenuItemInline, HeaderButtonOptionInline]
     fieldsets = (
         ('Header', {'fields': ('is_active', 'site_name', 'logo')}),
         ('Header button', {'fields': ('show_button', 'button_text', 'button_link', 'button_new_tab')}),
@@ -478,10 +485,17 @@ class ContactPersonInline(admin.StackedInline):
     fields = ('tag', 'name', 'role', 'phones', 'emails', 'order', 'is_active', 'is_featured', 'is_delete')
 
 
+class ContactQRInline(admin.StackedInline):
+    model = m.ContactQR
+    extra = 0
+    fields = ('label', 'image', 'link', 'order', 'is_active', 'is_delete')
+    verbose_name_plural = 'QR codes (shown side by side in the QR card)'
+
+
 @admin.register(m.ContactSection)
 class ContactSectionAdmin(SingletonAdmin):
     show_in_website_group = True
-    inlines = [ContactPersonInline]
+    inlines = [ContactPersonInline, ContactQRInline]
     fieldsets = (
         ('Visibility', {'fields': ('is_active', 'menu_anchor')}),
         ('Heading', {'fields': ('eyebrow', 'heading', 'side_text')}),
@@ -542,7 +556,7 @@ class FooterSocialInline(admin.TabularInline):
 class FooterLinkInline(admin.TabularInline):
     model = m.FooterLink
     extra = 1
-    fields = ('label', 'link', 'is_highlighted', 'open_in_new_tab', 'order', 'is_active', 'is_delete')
+    fields = ('label', 'link', 'is_highlighted', 'open_in_new_tab', 'use_register_dropdown', 'order', 'is_active', 'is_delete')
 
 
 class FooterLegalLinkInline(admin.TabularInline):
@@ -568,6 +582,35 @@ class CreditsAdmin(SingletonAdmin):
     fieldsets = (
         ('Credits line (shown in the footer)', {'fields': ('is_active', 'text', 'url', 'open_in_new_tab')}),
     )
+
+
+@admin.register(m.FloatingButtons)
+class FloatingButtonsAdmin(SingletonAdmin):
+    show_in_website_group = True
+    fieldsets = (
+        ('Visibility', {'fields': ('is_active',)}),
+        ('WhatsApp button', {'fields': ('show_whatsapp', 'whatsapp_number', 'whatsapp_message')}),
+        ('Call button', {'fields': ('show_call', 'call_number')}),
+    )
+
+
+class LegalPageForm(forms.ModelForm):
+    class Meta:
+        model = m.LegalPage
+        fields = '__all__'
+        widgets = {
+            'content': forms.Textarea(attrs={'rows': 24}),
+            'subtitle': forms.Textarea(attrs={'rows': 3}),
+        }
+
+
+@admin.register(m.LegalPage)
+class LegalPageAdmin(admin.ModelAdmin):
+    form = LegalPageForm
+    list_display = ('title', 'slug', 'order', 'is_active', 'is_delete')
+    list_filter = ('is_active', 'is_delete')
+    search_fields = ('title', 'content')
+    fields = ('title', 'slug', 'subtitle', 'content', 'order', 'is_active', 'is_delete')
 
 
 @admin.register(m.SEOSettings)

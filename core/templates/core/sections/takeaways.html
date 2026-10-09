@@ -18,7 +18,7 @@
         </div>
         <p class="take-label">{{ c.values_label }}</p>
         <ul class="take-list">{% for b in c.bullet_list %}<li>{{ b }}</li>{% endfor %}</ul>
-        {% if c.link_text %}<a class="take-link" href="{{ c.link_url }}">{{ c.link_text }} <span class="material-symbols-outlined">arrow_forward</span></a>{% endif %}
+        {% if c.link_text %}<a class="take-link" href="{{ c.link_url }}"{% if c.link_url|slice:":4" == "http" %} target="_blank" rel="noopener"{% endif %}>{{ c.link_text }} <span class="material-symbols-outlined">arrow_forward</span></a>{% endif %}
       </article>
       {% endfor %}
     </div>

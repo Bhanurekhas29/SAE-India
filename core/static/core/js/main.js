@@ -27,6 +27,54 @@
     });
   }
 
+  /* ---------- Register Now dropdown ---------- */
+  document.querySelectorAll('[data-dropdown]').forEach(function (dd) {
+    var btn = dd.querySelector('[data-dd-toggle]');
+    function set(open) { dd.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); set(!dd.classList.contains('open')); });
+    document.addEventListener('click', function (e) { if (!dd.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { set(false); btn.focus(); } });
+    dd.addEventListener('click', function (e) { if (e.target.closest('.dd-menu a')) set(false); });
+  });
+
+  /* ---------- legal popups (Terms, Privacy) ---------- */
+  var openModal = null, lastFocus = null;
+  function showModal(id) {
+    var m = document.getElementById(id);
+    if (!m || !m.classList.contains('modal')) return false;
+    if (openModal) hideModal(true);
+    lastFocus = document.activeElement;
+    m.hidden = false; document.body.classList.add('modal-open'); openModal = m;
+    var x = m.querySelector('.modal-x'); if (x) x.focus();
+    return true;
+  }
+  function hideModal(keepHash) {
+    if (!openModal) return;
+    openModal.hidden = true; document.body.classList.remove('modal-open'); openModal = null;
+    if (!keepHash && location.hash.indexOf('#legal-') === 0) history.replaceState(null, '', location.pathname + location.search);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#legal-"]');
+    if (a && showModal(a.getAttribute('href').slice(1))) { e.preventDefault(); return; }
+    if (openModal && (e.target === openModal || e.target.closest('[data-modal-close]'))) hideModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!openModal) return;
+    if (e.key === 'Escape') { hideModal(); return; }
+    if (e.key === 'Tab') {
+      var f = openModal.querySelectorAll('button, a[href]');
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+  if (location.hash.indexOf('#legal-') === 0) showModal(location.hash.slice(1));
+  window.addEventListener('hashchange', function () {
+    if (location.hash.indexOf('#legal-') === 0) showModal(location.hash.slice(1)); else hideModal(true);
+  });
+
   /* ---------- highlight the active menu item while scrolling ---------- */
   var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]')) : [];
   var spy = navLinks.map(function (a) {

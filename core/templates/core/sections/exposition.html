@@ -7,7 +7,7 @@
         <h2 class="sec-title">{{ exposition.heading }}</h2>
         {% if exposition.subtext %}<p class="sec-text">{{ exposition.subtext }}</p>{% endif %}
       </div>
-      {% if exposition.show_top_button and exposition.top_button_text %}<a class="btn btn-dark" href="{{ exposition.top_button_link }}">{{ exposition.top_button_text }}<span class="material-symbols-outlined">chevron_right</span></a>{% endif %}
+      {% if exposition.show_top_button and exposition.top_button_text %}<a class="btn btn-dark" href="{{ exposition.top_button_link }}">{{ exposition.top_button_text }}<span class="material-symbols-outlined">keyboard_arrow_down</span></a>{% endif %}
     </header>
     <div class="expo-grid">
       <aside class="expo-side">
@@ -28,7 +28,7 @@
         </div>
         {% endif %}
       </aside>
-      <div class="booth-list">
+      <div class="booth-list" id="expo-booths">
         {% for b in exposition.booths_live %}
         <article class="booth reveal{% if b.flagship_tag %} is-flagship{% endif %}" style="--tint:{{ b.tint_color }}; --acc:{{ b.accent_color }}">
           {% if b.flagship_tag %}<span class="flag-tag">{{ b.flagship_tag }}</span>{% endif %}

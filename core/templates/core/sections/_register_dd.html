@@ -1,0 +1,10 @@
+{% if header and header.button_options_live %}
+<div class="reg-dd" data-dropdown>
+  <button class="{{ classes }}" type="button" aria-haspopup="true" aria-expanded="false" data-dd-toggle>{{ label }}</button>
+  <ul class="dd-menu dd-up" role="menu">
+    {% for o in header.button_options_live %}
+    <li role="none"><a role="menuitem" href="{{ o.link }}"{% if o.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ o.label }}{% if o.open_in_new_tab %}<span class="material-symbols-outlined">arrow_outward</span>{% endif %}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% else %}<a class="{{ classes }}" href="{{ fallback }}">{{ label }}</a>{% endif %}

@@ -28,7 +28,7 @@
       </div>
       {% endif %}
       <div class="btn-row">
-        {% if hero.show_primary_button and hero.primary_button_text %}<a class="btn btn-orange" href="{{ hero.primary_button_link }}">{{ hero.primary_button_text }}</a>{% endif %}
+        {% if hero.show_primary_button and hero.primary_button_text %}{% include "core/sections/_register_dd.html" with classes="btn btn-orange" label=hero.primary_button_text fallback=hero.primary_button_link %}{% endif %}
         {% if hero.show_secondary_button and hero.secondary_button_text %}<a class="btn btn-glass" href="{{ hero.secondary_button_link }}">{{ hero.secondary_button_text }}</a>{% endif %}
       </div>
     </div>
