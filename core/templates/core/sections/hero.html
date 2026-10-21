@@ -50,7 +50,7 @@
         <span class="wheel-icon" style="left:{{ s.ix }}%;top:{{ s.iy }}%"><span class="material-symbols-outlined">{{ s.icon }}</span></span>
         <span class="wheel-label" style="left:{{ s.lx }}%;top:{{ s.ly }}%">{{ s.title }}</span>
         {% endfor %}
-        <div class="wheel-center">{% if hero.wheel_logo %}<img src="{{ hero.wheel_logo.url }}" alt="">{% else %}<span class="wc-text"><i class="o">a</i><i class="b">p</i><i class="g">ac</i></span>{% endif %}</div>
+        <div class="wheel-center">{% if hero.wheel_logo %}<img src="{{ hero.wheel_logo.url }}" alt="">{% else %}<span class="wc-text">{{ hero.wheel_center_text }}{% if hero.wheel_center_subtext %}<i class="n">{{ hero.wheel_center_subtext }}</i>{% endif %}</span>{% endif %}</div>
       </div>
     </div>
     {% endif %}

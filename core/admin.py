@@ -84,7 +84,7 @@ class HeroSectionAdmin(SingletonAdmin):
         ('Buttons', {'fields': ('show_primary_button', 'primary_button_text', 'primary_button_link',
                                 'show_secondary_button', 'secondary_button_text', 'secondary_button_link')}),
         ('Background', {'fields': ('background_image', 'overlay_text')}),
-        ('Focus-areas wheel', {'fields': ('show_wheel', 'wheel_logo')}),
+        ('Focus-areas wheel', {'fields': ('show_wheel', 'wheel_logo', 'wheel_center_text', 'wheel_center_subtext')}),
     )
 
 

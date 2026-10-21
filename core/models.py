@@ -104,7 +104,11 @@ class HeroSection(SingletonModel):
     show_wheel = models.BooleanField('Show the round focus-areas wheel', default=True,
                                      help_text='The circle on the right side of the Hero. Its slices are listed below.')
     wheel_logo = models.ImageField('Wheel centre logo', upload_to='hero/', blank=True,
-                                   help_text='Logo shown in the white circle in the middle (PNG or SVG with a clear background).')
+                                   help_text='Logo shown in the white circle in the middle (PNG or SVG with a clear background). When set, it replaces the text below.')
+    wheel_center_text = models.CharField('Wheel centre text', max_length=10, default='APAC', blank=True,
+                                         help_text='Main word in the middle of the wheel, e.g. APAC. Used when no logo is uploaded.')
+    wheel_center_subtext = models.CharField('Wheel centre small text', max_length=8, default='23', blank=True,
+                                            help_text='Small text under the main word, e.g. 23. Leave empty to hide it.')
 
     class Meta:
         verbose_name = 'Hero Section'
