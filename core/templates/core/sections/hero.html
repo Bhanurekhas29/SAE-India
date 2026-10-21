@@ -1,6 +1,6 @@
 {% if hero %}
 <section class="hero" id="{{ hero.menu_anchor }}"{% if hero.background_image %} style="--hero-bg: url('{{ hero.background_image.url }}')"{% endif %}>
-  <div class="container hero-inner">
+  <div class="container hero-inner{% if wheel %} has-wheel{% endif %}">
     <div class="hero-copy reveal">
       {% if hero.pill_text %}<span class="pill pill-dark">{% if hero.pill_show_dot %}<i class="dot"></i>{% endif %}{{ hero.pill_text }}</span>{% endif %}
       <h1 class="hero-title">
@@ -32,7 +32,29 @@
         {% if hero.show_secondary_button and hero.secondary_button_text %}<a class="btn btn-glass" href="{{ hero.secondary_button_link }}">{{ hero.secondary_button_text }}</a>{% endif %}
       </div>
     </div>
-    {% if hero.overlay_text %}<p class="hero-script" aria-hidden="true">{{ hero.overlay_text }}</p>{% endif %}
+    {% if wheel %}
+    <div class="wheel-wrap reveal">
+      <div class="wheel" role="img" aria-label="Focus areas of the conference">
+        <svg viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <linearGradient id="wg0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E3A42"/><stop offset="1" stop-color="#06161D"/></linearGradient>
+            <linearGradient id="wg1" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14323F"/><stop offset="1" stop-color="#070F1A"/></linearGradient>
+            <linearGradient id="wg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0A3B34"/><stop offset="1" stop-color="#04171A"/></linearGradient>
+            <radialGradient id="wglow" cx="50%" cy="50%" r="50%"><stop offset=".55" stop-color="#34D399" stop-opacity="0"/><stop offset="1" stop-color="#34D399" stop-opacity=".22"/></radialGradient>
+          </defs>
+          <circle cx="200" cy="200" r="196" fill="#fff"/>
+          {% for s in wheel %}<path d="{{ s.d }}" fill="url(#wg{{ s.grad }})" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>{% endfor %}
+          <circle cx="200" cy="200" r="192" fill="url(#wglow)"/>
+        </svg>
+        {% for s in wheel %}
+        <span class="wheel-icon" style="left:{{ s.ix }}%;top:{{ s.iy }}%"><span class="material-symbols-outlined">{{ s.icon }}</span></span>
+        <span class="wheel-label" style="left:{{ s.lx }}%;top:{{ s.ly }}%">{{ s.title }}</span>
+        {% endfor %}
+        <div class="wheel-center">{% if hero.wheel_logo %}<img src="{{ hero.wheel_logo.url }}" alt="">{% else %}<span class="wc-text"><i class="o">a</i><i class="b">p</i><i class="g">ac</i></span>{% endif %}</div>
+      </div>
+    </div>
+    {% endif %}
+    {% if hero.overlay_text and not wheel %}<p class="hero-script" aria-hidden="true">{{ hero.overlay_text }}</p>{% endif %}
   </div>
 </section>
 {% endif %}

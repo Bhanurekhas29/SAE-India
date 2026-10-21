@@ -60,6 +60,12 @@ class HeroTaglineInline(admin.TabularInline):
     fields = ('text', 'order', 'is_active', 'is_delete')
 
 
+class HeroWheelSliceInline(admin.TabularInline):
+    model = m.HeroWheelSlice
+    extra = 1
+    fields = ('title', 'icon', 'order', 'is_active', 'is_delete')
+
+
 class HeroInfoChipInline(admin.TabularInline):
     model = m.HeroInfoChip
     extra = 1
@@ -69,7 +75,7 @@ class HeroInfoChipInline(admin.TabularInline):
 @admin.register(m.HeroSection)
 class HeroSectionAdmin(SingletonAdmin):
     show_in_website_group = True
-    inlines = [HeroTaglineInline, HeroInfoChipInline]
+    inlines = [HeroTaglineInline, HeroInfoChipInline, HeroWheelSliceInline]
     fieldsets = (
         ('Visibility', {'fields': ('is_active', 'menu_anchor')}),
         ('Pill tag', {'fields': ('pill_text', 'pill_show_dot')}),
@@ -78,6 +84,7 @@ class HeroSectionAdmin(SingletonAdmin):
         ('Buttons', {'fields': ('show_primary_button', 'primary_button_text', 'primary_button_link',
                                 'show_secondary_button', 'secondary_button_text', 'secondary_button_link')}),
         ('Background', {'fields': ('background_image', 'overlay_text')}),
+        ('Focus-areas wheel', {'fields': ('show_wheel', 'wheel_logo')}),
     )
 
 

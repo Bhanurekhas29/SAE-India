@@ -6,6 +6,41 @@ from django.shortcuts import render
 from . import models as m
 
 
+def build_wheel(hero, size=400, r_in=82, r_out=192):
+    """Slice geometry for the Hero wheel: an SVG path per slice plus label and icon positions (in % of the wheel)."""
+    import math
+    if not hero or not hero.show_wheel:
+        return []
+    slices = live(hero.wheel_slices.all())
+    n = len(slices)
+    if not n:
+        return []
+    cx = cy = size / 2
+    step = 360 / n
+
+    def pt(r, deg):
+        a = math.radians(deg)
+        return cx + r * math.cos(a), cy + r * math.sin(a)
+
+    out = []
+    for i, sl in enumerate(slices):
+        a0, a1 = -90 + i * step, -90 + (i + 1) * step
+        mid = (a0 + a1) / 2
+        x0, y0 = pt(r_out, a0)
+        x1, y1 = pt(r_out, a1)
+        x2, y2 = pt(r_in, a1)
+        x3, y3 = pt(r_in, a0)
+        big = 1 if step > 180 else 0
+        d = (f'M{x0:.2f},{y0:.2f} A{r_out},{r_out} 0 {big} 1 {x1:.2f},{y1:.2f} '
+             f'L{x2:.2f},{y2:.2f} A{r_in},{r_in} 0 {big} 0 {x3:.2f},{y3:.2f} Z')
+        lx, ly = pt((r_in + r_out) / 2 - 9, mid)
+        ix, iy = pt(r_out + 2, mid)
+        out.append({'title': sl.title, 'icon': sl.icon, 'd': d, 'grad': i % 3,
+                    'lx': round(lx / size * 100, 2), 'ly': round(ly / size * 100, 2),
+                    'ix': round(ix / size * 100, 2), 'iy': round(iy / size * 100, 2)})
+    return out
+
+
 def asset_version():
     """Changes whenever main.css / main.js change, so browsers never keep a stale copy."""
     base = os.path.join(settings.BASE_DIR, 'core', 'static', 'core')
@@ -88,6 +123,8 @@ def index(request):
     site_name = header.site_name if header else 'SAE India'
     page_title = (seo.meta_title if seo and seo.meta_title else site_name)
 
+    hero = with_items(solo(m.HeroSection), 'taglines', 'info_chips')
+
     context = {
         'asset_version': asset_version(),
         'page_title': page_title,
@@ -96,7 +133,8 @@ def index(request):
         'og_image': seo.og_image if seo and seo.og_image else None,
         'site_name': site_name,
         'header': header,
-        'hero': with_items(solo(m.HeroSection), 'taglines', 'info_chips'),
+        'hero': hero,
+        'wheel': build_wheel(hero),
         'about': with_items(solo(m.AboutSection), 'stats'),
         'topics': with_items(solo(m.TopicsSection), 'cards'),
         'takeaways': with_items(solo(m.TakeawaysSection), 'cards'),

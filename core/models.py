@@ -101,6 +101,11 @@ class HeroSection(SingletonModel):
     overlay_text = models.CharField('Text on the image', max_length=120, blank=True,
                                     help_text='Script text shown over the image, e.g. Shaping the Future of Mobility')
 
+    show_wheel = models.BooleanField('Show the round focus-areas wheel', default=True,
+                                     help_text='The circle on the right side of the Hero. Its slices are listed below.')
+    wheel_logo = models.ImageField('Wheel centre logo', upload_to='hero/', blank=True,
+                                   help_text='Logo shown in the white circle in the middle (PNG or SVG with a clear background).')
+
     class Meta:
         verbose_name = 'Hero Section'
         verbose_name_plural = 'Hero Section'
@@ -138,6 +143,22 @@ class HeroInfoChip(models.Model):
 
     def __str__(self):
         return self.text
+
+
+class HeroWheelSlice(models.Model):
+    hero = models.ForeignKey(HeroSection, on_delete=models.CASCADE, related_name='wheel_slices')
+    title = models.CharField(max_length=80, help_text='e.g. Cybersecurity & Functional Safety')
+    icon = models.CharField(max_length=60, default='hub', help_text=ICON_HELP)
+    order = models.PositiveIntegerField(default=0, help_text='Lower numbers appear first (clockwise from the top).')
+    is_active = models.BooleanField(default=True)
+    is_delete = models.BooleanField('Deleted', default=False, help_text='Soft delete: hidden on the site.')
+
+    class Meta:
+        verbose_name = 'Wheel slice'
+        ordering = ['order', 'id']
+
+    def __str__(self):
+        return self.title
 
 
 class AboutSection(SingletonModel):
